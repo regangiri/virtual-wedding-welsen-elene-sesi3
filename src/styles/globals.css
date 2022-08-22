@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.groom-bride-title {
+  background: url("../../public/assets/images/flower.png");
+  background-size: 150px 100px;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+/* .groom-bride-section {
+  background: linear-gradient(to bottom, #e2b99d, #6d6855);
+} */
+.landing {
+  background: linear-gradient(rgba(0, 0, 0, 0.427), rgba(0, 0, 0, 0.204)),
+    url("https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105221/welsenElene/Welsen___Elene_CS_1943_hevllx.jpg");
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
