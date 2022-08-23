@@ -26,7 +26,7 @@ export default function Home() {
     return (
       <>
         <Head>
-          <title>Weed</title>
+          <title>Welsen Elene Wedding Invitation</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
