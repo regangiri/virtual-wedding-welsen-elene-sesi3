@@ -4,13 +4,13 @@ export const ImagesStock = {
   ourmoment1:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105245/welsenElene/Welsen___Elene_CS_1093_eybxoe.jpg",
   ourmoment2:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105241/welsenElene/Welsen___Elene_CS_0911_zc4cnm.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105211/welsenElene/Welsen___Elene_CS_0907_i4oapz.jpg",
   ourmoment3:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105238/welsenElene/Welsen___Elene_CS_1078_jaeazs.jpg",
   ourmoment4:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105231/welsenElene/Welsen___Elene_CS_1966-2_jdjfih.jpg",
   ourmoment5:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105220/welsenElene/Welsen___Elene_CS_1939_rxm8tx.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105238/welsenElene/Welsen___Elene_CS_0956_sjytyp.jpg",
 
   ourmoment6:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105216/welsenElene/Welsen___Elene_CS_1747_qtwdcy.jpg",
@@ -23,21 +23,19 @@ export const ImagesStock = {
   ourmoment10:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105206/welsenElene/Welsen___Elene_CS_0629_orjn8s.jpg",
   ourmoment11:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105204/welsenElene/Welsen___Elene_CS_0079_ervw5b.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105203/welsenElene/Welsen___Elene_CS_0153_b4k7d7.jpg",
   ourmoment12:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105254/welsenElene/Welsen___Elene_CS_0931_vq3uta.jpg",
   ourmoment13:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105216/welsenElene/Welsen___Elene_CS_1043_mgyaol.jpg",
   ourmoment14:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105223/welsenElene/Welsen___Elene_CS_0115_t5d41z.jpg",
-  ourmoment15:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105243/welsenElene/Welsen___Elene_CS_0988_az7w8n.jpg",
+  ourmoment15:
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661263470/welsenElene/Welsen_Elene_CS_1676_be9yiu.jpg",
   ourmoment16:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105242/welsenElene/Welsen___Elene_CS_1709_odzqwh.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105239/welsenElene/Welsen___Elene_CS_0216_b8eghw.jpg",
   ourmoment17:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105255/welsenElene/Welsen___Elene_CS_1447_qdroj2.jpg",
-  ourmoment18:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105252/welsenElene/Welsen___Elene_CS_1301_g9ttcr.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661263471/welsenElene/Welsen_Elene_CS_1359_wzxvvf.jpg",
 
   groom:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1650902306/ryanAgnes/ryan-cropped_mlq2sj.jpg",
@@ -49,5 +47,5 @@ export const ImagesStock = {
   logoPengantin:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661178901/welsenElene/logo_xoqtg2.png",
   brideGroom:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105242/welsenElene/Welsen___Elene_CS_1709_odzqwh.jpg",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661263467/welsenElene/Welsen_Elene_CS_1608_jatak9.jpg",
 };

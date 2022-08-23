@@ -43,13 +43,20 @@ export const sendMessage = async ({ name, message }) => {
   }
 };
 
-export const addRSVP = async (name, telephone, confirmation, total_guest) => {
+export const addRSVP = async (
+  name,
+  telephone,
+  total_guest,
+  reception_confirmation,
+  matrimony_confirmation
+) => {
   try {
     const addGuest = {
       name,
       telephone,
-      confirmation,
       total_guest,
+      reception_confirmation,
+      matrimony_confirmation,
       created_at: new Date(),
     };
 

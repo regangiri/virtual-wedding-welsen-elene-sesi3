@@ -118,7 +118,7 @@ export default function ImageGalleryV2() {
     <div className="container w-full max-w-xl bg-palewhite py-12 px-2 text-md text-center ">
       <motion.h1
         animate={titleAnimation}
-        className="text-5xl text-black drop-shadow-sm font-semibold text-center pb-8 font-vibes"
+        className="text-5xl text-secondary drop-shadow-sm font-semibold text-center pb-8 font-vibes"
       >
         Our Moments
       </motion.h1>

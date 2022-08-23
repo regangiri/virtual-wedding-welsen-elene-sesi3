@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { IoMailOpenOutline } from "react-icons/io5";
 
 export default function Landing({ btnAction }) {
-  const router = useRouter();
+  const { query } = useRouter();
 
   return (
     <div className="flex items-center justify-center flex-col overflow-hidden">
@@ -28,10 +29,10 @@ export default function Landing({ btnAction }) {
                 }}
                 className="text-lg tracking-tight flex flex-col lg:text-2xl"
               >
-                <span className="block text-palewhite xl:inline font-baskerville sm:tracking-wider drop-shadow-xl my-3 text-base ">
+                <span className="block text-palewhite xl:inline font-baskerville tracking-wider drop-shadow-xl my-3 text-base md:text-3xl ">
                   THE WEDDING OF
                 </span>
-                <span className="block text-palewhite xl:inline text-4xl sm:text-6xl tracking-wider drop-shadow-xl my-3 font-vibes">
+                <span className="block text-palewhite xl:inline text-4xl sm:text-6xl tracking-wider drop-shadow-xl my-3 font-baskerville py-6">
                   Welsen & Elene
                 </span>
               </motion.h1>
@@ -67,14 +68,18 @@ export default function Landing({ btnAction }) {
                     opacity: 0,
                   },
                 }}
-                className="mt-5 max-w-md mx-auto b sm:flex sm:justify-center justify-center md:mt-12"
+                className="mt-5 max-w-md mx-auto flex-col sm:flex sm:justify-center justify-center md:mt-12"
               >
+                <div className="guest-name text-white py-6 text-base sm:text-xl">
+                  Kepada Yth. <br /> <b>{query.to}</b>
+                </div>
                 <div
-                  className="rounded-md flex justify-center px-10"
+                  className="rounded-md flex justify-center px-4"
                   onClick={btnAction}
                 >
-                  <a className="md:w-full lg:w-full text-center w-80 flex items-center space-x-2 justify-center px-8 py-3  border border-accent  backdrop-blur-md text-base font-medium rounded-md text-white  hover:bg-white hover:text-black md:py-2 md:text-lg md:px-10">
-                    <span>Open The Invitation</span>
+                  <a className="w-full text-center max-w-xs flex items-center space-x-2 justify-center border border-accent  backdrop-blur-md font-medium rounded-md text-white mx-auto hover:bg-white hover:text-black py-2 text-lg px-2">
+                    <IoMailOpenOutline size="20" className="mr-2" />{" "}
+                    <span>Buka Undangan</span>
                   </a>
                 </div>
               </motion.div>

@@ -56,28 +56,32 @@ function ThankyouSection() {
     <div className="flex flex-col items-center justify-center w-full max-w-xl bg-primary py-12 text-md text-center font-serif">
       <motion.h1
         animate={titleAnimation}
-        className="font-vibes text-5xl font-bold py-6"
+        className="font-baskerville text-5xl font-bold py-6"
       >
-        Thank You
+        Terima Kasih
       </motion.h1>
 
-      <motion.div
-        animate={videoAnimation}
-        ref={ref}
-        className="logo h-44 w-44 mx-auto relative"
-      >
-        <Image src={ImagesStock.logoPengantin} layout="fill" alt="logo" />
-      </motion.div>
-      <motion.div animate={rightAnimation} className="thankyou-text ">
-        <h3 className="font-vibes text-5xl py-3 ">Welsen & Elene</h3>
-        <p className="xxs:text-base sm:text-lg">
-          {`It will be a joy for us if you are still willing to give your blessing
-          from afar. Please know that you are in our thoughts and will be in our
-          hearts, even though we are deeply sorry, we can't invite you to the
-          ceremony due to the pandemic restriction.`}
+      <motion.div ref={ref} animate={rightAnimation} className="thankyou-text ">
+        <p className="xxs:text-base sm:text-lg font-semibold px-2">
+          Merupakan sebuah kehormatan dan kebahagiaan bagi kami apabila anda
+          berkenan hadir pada acara pernikahan ini
         </p>
-
-        <p className="font-bold py-6">#SENtforELENE</p>
+        <div className="thankyou-family-name xxs:text-[14px] sm:text-lg px-3 py-6 font-semibold">
+          <p className="text-base sm:text-xl">Kami yang berbahagia:</p>
+          <p className="pt-1">
+            Keluarga Bapak Erwin Sanjaya & Ibu Florensia Farah
+          </p>
+          <p className="pb-1">
+            Keluarga Bapak Thio Tjoen Hwa & Ibu Tjung Djau Khiun
+          </p>
+        </div>
+        <motion.div
+          animate={videoAnimation}
+          className="logo h-44 w-44 mx-auto relative"
+        >
+          <Image src={ImagesStock.logoPengantin} layout="fill" alt="logo" />
+        </motion.div>
+        <p className="font-bold py-6 text-xl">#SENtforELENE</p>
       </motion.div>
     </div>
   );

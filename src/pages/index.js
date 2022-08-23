@@ -43,11 +43,11 @@ export default function Home() {
       <GroomBride />
       <PlaceAndTime />
       <Livestream />
-      <ImageGalleryV2 />
-      {/* <Gift /> */}
-      <Guestbook />
       <Rsvp />
+      <ImageGalleryV2 />
       <ThankyouSection />
+      {/* <Gift /> */}
+      {/* <Guestbook /> */}
       {/* <Footer /> */}
       <MusicPlayer />
     </Layout>

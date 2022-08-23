@@ -12,12 +12,20 @@ const options = [
   { id: 2, value: "Tidak Hadir" },
 ];
 
+const jumlahOrang = [
+  { id: 1, value: 0 },
+  { id: 2, value: 1 },
+  { id: 3, value: 2 },
+];
+
 function Rsvp() {
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
   const [telephone, setTelephone] = useState("");
-  const [totalGuest, setTotalGuest] = useState(0);
+  const [totalGuest, setTotalGuest] = useState(jumlahOrang[0]);
   const [confirmation, setConfirmation] = useState(options[0]);
+  const [pemberkatanRsvp, setPemberkatanRsvp] = useState("");
+  const [resepsiRsvp, setResepsiRsvp] = useState(options[0]);
 
   const { ref, inView } = useInView();
   const titleAnimation = useAnimation();
@@ -29,7 +37,7 @@ function Rsvp() {
       titleAnimation.start({
         opacity: 1,
         transition: {
-          duration: 2,
+          duration: 1,
           delay: 1,
         },
       });
@@ -74,22 +82,29 @@ function Rsvp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addRSVP(name, telephone, confirmation.value, totalGuest);
+    addRSVP(
+      name,
+      telephone,
+
+      totalGuest.value,
+      pemberkatanRsvp,
+      resepsiRsvp
+    );
     setShowModal(true);
     resetForm();
   };
   return (
-    <div className="relative flex flex-col items-center justify-center w-full max-w-xl bg-[#f0ede6] py-12">
+    <div className="relative flex flex-col items-center justify-center w-full max-w-xl bg-primary py-12">
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 bg-gray-50" />
       </div>
       <div className="relative lg:grid lg:grid-cols-1 ">
         <motion.div
           animate={videoAnimation}
-          className="lg:col-span-12 xl:col-span-3 rounded-xl text-center py-16 bg-primary text-palewhite"
+          className="lg:col-span-12 xl:col-span-3 rounded-xl text-center py-16 bg-primary text-black"
         >
-          <h1 className="text-3xl font-typography mb-8 font-semibold">
-            Morissey Hotel Jakarta
+          <h1 className="text-3xl font-baskerville mb-8 font-semibold ">
+            Resepsi Pernikahan
           </h1>
           <p>Jl. KH Wahid Hasyim No.70, RT.7/RW.5, Kb. Sirih,</p>
           <p className="mb-[35px]">
@@ -114,9 +129,15 @@ function Rsvp() {
           <div className="mx-auto">
             <motion.h1
               animate={titleAnimation}
-              className="text-3xl mx-auto lg:w-96 w-full text-center relative font-typography mb-8 font-semibold"
+              className="text-xl mx-auto  w-full text-center relative font-baskerville mb-8 font-extrabold"
             >
               RSVP
+            </motion.h1>
+            <motion.h1
+              animate={titleAnimation}
+              className="text-sm mx-auto  w-full text-center relative font-baskerville mb-8 font-semibold"
+            >
+              Mohon bantuannya untuk mengisi form dibawah ini
             </motion.h1>
             <motion.form
               animate={rightAnimation}
@@ -156,27 +177,62 @@ function Rsvp() {
                   placeholder="Telephone number"
                 />
               </div>
-              <div className="lg:mx-auto md:mx-auto">
-                <label htmlFor="total-guest" className="sr-only">
-                  Total guest
-                </label>
-                <input
-                  autoComplete="off"
-                  required
-                  onChange={(event) => setTotalGuest(event.target.value)}
-                  type="number"
-                  name="total-guest"
-                  id="total-guest"
-                  className="block shadow-sm lg:w-96 w-full md:w-[500px] py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
-                  placeholder="Total Guest"
+
+              <div className="mx-auto lg:w-96 w-full md:w-[500px]">
+                <p className="text-lg ">Jumlah Orang</p>
+                <Select
+                  selected={totalGuest}
+                  setSelected={setTotalGuest}
+                  options={jumlahOrang}
                 />
               </div>
-              <div className="mx-auto lg:w-96 w-full md:w-[500px]">
-                <Select
-                  selected={confirmation}
-                  setSelected={setConfirmation}
-                  options={options}
+              <h5 className="py-0 text-xl">
+                Apakah anda dapat menghadiri
+                <b> Resepsi Pernikahan di Hotel Morissey?</b>
+              </h5>
+
+              <div
+                onChange={(e) => {
+                  setPemberkatanRsvp(e.target.value);
+                  console.log(e.target.value);
+                }}
+                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
+              >
+                <input type="radio" id="ya" name="pemberkatan" value="ya" />
+                <label for="ya" className="mx-1 mr-3">
+                  Ya
+                </label>
+
+                <input
+                  type="radio"
+                  id="tidak"
+                  name="pemberkatan"
+                  value="tidak"
                 />
+                <label className="mx-1" for="tidak">
+                  Tidak
+                </label>
+              </div>
+              <h5 className="py-0 text-xl">
+                Apakah anda dapat menghadiri
+                <b> Pemberkatan Pernikahan di Gereja?</b>
+              </h5>
+              <div
+                onChange={(e) => {
+                  setResepsiRsvp(e.target.value);
+                  console.log(e.target.value);
+                }}
+                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
+              >
+                <input type="radio" id="ya" name="resepsi" value="ya" />
+                <label for="ya" className="mx-1 mr-3">
+                  Ya
+                </label>
+
+                <input type="radio" id="tidak" name="resepsi" value="tidak" />
+                <label className="mx-1" for="tidak">
+                  Tidak
+                </label>
               </div>
 
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">

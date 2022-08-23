@@ -79,10 +79,13 @@ function GroomBride() {
   }, [inView]);
 
   return (
-    <div className="groom-bride-section w-full max-w-xl bg-primary py-12 text-md text-center">
+    <div
+      ref={ref}
+      className="groom-bride-section w-full max-w-xl bg-primary py-12 text-md text-center"
+    >
       <motion.h2
         animate={titleAnimation}
-        className="groom-bride-title text-5xl sm:text-7xl font-vibes py-6"
+        className="groom-bride-title text-4xl sm:text-5xl px-3 font-baskerville py-6"
       >
         Groom & Bride
       </motion.h2>
@@ -99,37 +102,40 @@ function GroomBride() {
           className="rounded-md"
         />
       </motion.div>
-      <div
-        ref={ref}
-        className="groom-bride-desc flex items-center justify-around"
-      >
+      <div className="groom-bride-desc flex items-center justify-around">
         <motion.div
           animate={groomNameAnimation}
           className="groom-desc flex items-center justify-center flex-col font-baskerville"
         >
-          <h3 className="text-2xl xxs:text-3xl sm:text-5xl font-bold text-center font-vibes border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
+          <h3 className="text-xl xxs:text-2xl sm:text-4xl font-bold text-center font-serif border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
             Welsen Lowis
           </h3>
-          <p className="text-xs sm:text-base  font-baskerville">
-            <h4 className="font-bold text-xl">Anak pertama dari:</h4> <br />{" "}
-            Bapak Erwin Sanjaya
-            <br /> & <br />
-            Ibu Florensia Farah
-          </p>
+          <h4 className="text-xs sm:text-base  font-baskerville">
+            <p className="font-bold text-xs md:text-base">Anak pertama dari:</p>{" "}
+            <p className="text-xs md:text-base">
+              <br /> Bapak Erwin Sanjaya
+              <br /> & <br />
+              Ibu Florensia Farah
+            </p>
+          </h4>
         </motion.div>
         <motion.div
           animate={brideNameAnimation}
           className="bride-desc flex items-center justify-center flex-col font-baskerville"
         >
-          <h3 className="text-2xl xxs:text-3xl sm:text-5xl font-bold text-center font-vibes border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
+          <h3 className="text-xl xxs:text-2xl sm:text-4xl font-bold text-center font-serif border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
             Elene Delfia
           </h3>
-          <p className="text-xs sm:text-base font-baskerville">
-            <h4 className="font-bold text-xl"> Anak kedua dari:</h4> <br />
-            Bapak Thio Tjoen Hwa <br />
-            & <br />
-            Ibu Tjung Djau Khiun
-          </p>
+          <h4 className="text-xs sm:text-base font-baskerville">
+            <p className="font-bold text-xs md:text-base"> Anak kedua dari:</p>{" "}
+            <p className="text-xs md:text-base">
+              {" "}
+              <br />
+              Bapak Thio Tjoen Hwa <br />
+              & <br />
+              Ibu Tjung Djau Khiun
+            </p>
+          </h4>
         </motion.div>
       </div>
     </div>
