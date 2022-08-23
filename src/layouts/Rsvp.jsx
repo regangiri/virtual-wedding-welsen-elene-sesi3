@@ -199,7 +199,7 @@ function Rsvp() {
                 className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
               >
                 <input type="radio" id="ya" name="pemberkatan" value="ya" />
-                <label for="ya" className="mx-1 mr-3">
+                <label htmlFor="ya" className="mx-1 mr-3">
                   Ya
                 </label>
 
@@ -209,7 +209,7 @@ function Rsvp() {
                   name="pemberkatan"
                   value="tidak"
                 />
-                <label className="mx-1" for="tidak">
+                <label className="mx-1" htmlFor="tidak">
                   Tidak
                 </label>
               </div>
@@ -225,12 +225,12 @@ function Rsvp() {
                 className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
               >
                 <input type="radio" id="ya" name="resepsi" value="ya" />
-                <label for="ya" className="mx-1 mr-3">
+                <label htmlFor="ya" className="mx-1 mr-3">
                   Ya
                 </label>
 
                 <input type="radio" id="tidak" name="resepsi" value="tidak" />
-                <label className="mx-1" for="tidak">
+                <label className="mx-1" htmlFor="tidak">
                   Tidak
                 </label>
               </div>
