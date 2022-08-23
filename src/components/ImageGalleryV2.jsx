@@ -28,7 +28,7 @@ export default function ImageGalleryV2() {
         x: 0,
         opacity: 1,
         transition: {
-          duration: 0.8,
+          duration: 0.4,
         },
       });
     }
@@ -112,10 +112,6 @@ export default function ImageGalleryV2() {
       name: "our moments",
       src: ImagesStock.ourmoment17,
     },
-    {
-      name: "our moments",
-      src: ImagesStock.ourmoment18,
-    },
   ];
 
   return (
@@ -139,7 +135,7 @@ export default function ImageGalleryV2() {
               className="mb-3"
               loading="eager"
               ismap="true"
-              alt=""
+              alt="loading"
             />
           );
         })}

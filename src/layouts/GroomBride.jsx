@@ -52,24 +52,24 @@ function GroomBride() {
     }
     if (!inView) {
       titleAnimation.start({
-        y: -70,
+        y: 0,
         opacity: 0,
       });
       imageAnimation.start({
-        x: -200,
+        x: 0,
         opacity: 0,
       });
       groomNameAnimation.start({
-        x: -500,
-        scale: 0,
+        x: -50,
+        scale: 1,
         opacity: 0,
         transition: {
           duration: 1.2,
         },
       });
       brideNameAnimation.start({
-        x: 500,
-        scale: 0,
+        x: -50,
+        scale: 1,
         opacity: 0,
         transition: {
           duration: 1.2,
@@ -105,26 +105,27 @@ function GroomBride() {
       >
         <motion.div
           animate={groomNameAnimation}
-          className="groom-desc flex items-center justify-center flex-col"
+          className="groom-desc flex items-center justify-center flex-col font-baskerville"
         >
           <h3 className="text-2xl xxs:text-3xl sm:text-5xl font-bold text-center font-vibes border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
             Welsen Lowis
           </h3>
-          <p className="text-xs xxs:text-sm sm:text-base  font-baskerville">
-            <b>Anak pertama dari:</b> <br /> Bapak Erwin Sanjaya
+          <p className="text-xs sm:text-base  font-baskerville">
+            <h4 className="font-bold text-xl">Anak pertama dari:</h4> <br />{" "}
+            Bapak Erwin Sanjaya
             <br /> & <br />
             Ibu Florensia Farah
           </p>
         </motion.div>
         <motion.div
           animate={brideNameAnimation}
-          className="bride-desc flex items-center justify-center flex-col"
+          className="bride-desc flex items-center justify-center flex-col font-baskerville"
         >
           <h3 className="text-2xl xxs:text-3xl sm:text-5xl font-bold text-center font-vibes border-b-2 border-secondary text-secondary h-1/2  my-6 py-3">
             Elene Delfia
           </h3>
-          <p className="text-xs xxs:text-sm sm:text-base font-baskerville">
-            <b> Anak kedua dari:</b> <br />
+          <p className="text-xs sm:text-base font-baskerville">
+            <h4 className="font-bold text-xl"> Anak kedua dari:</h4> <br />
             Bapak Thio Tjoen Hwa <br />
             & <br />
             Ibu Tjung Djau Khiun

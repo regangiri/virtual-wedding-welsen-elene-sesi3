@@ -5,10 +5,10 @@ export default function Landing({ btnAction }) {
   const router = useRouter();
 
   return (
-    <div className="flex  items-center justify-center flex-col">
+    <div className="flex items-center justify-center flex-col overflow-hidden">
       <div className="relative landing w-full max-w-xl h-screen bg-primary py-24 px-2 text-md text-center">
         <div className="relative pt-6 pb-16 sm:pb-24">
-          <main className="mt-16 mx-auto max-w-7xl px-16 sm:mt-24">
+          <main className="mt-16 mx-auto max-w-7xl sm:mt-24">
             <div className="text-center">
               <motion.h1
                 animate="visible"
@@ -26,12 +26,12 @@ export default function Landing({ btnAction }) {
                     opacity: 0,
                   },
                 }}
-                className="text-lg tracking-tight flex flex-col  lg:text-2xl"
+                className="text-lg tracking-tight flex flex-col lg:text-2xl"
               >
-                <span className="block text-palewhite xl:inline font-serif tracking-wider drop-shadow-xl my-3 text-3xl">
+                <span className="block text-palewhite xl:inline font-baskerville sm:tracking-wider drop-shadow-xl my-3 text-base ">
                   THE WEDDING OF
                 </span>
-                <span className="block text-palewhite xl:inline text-6xl tracking-wider drop-shadow-xl my-3 font-vibes">
+                <span className="block text-palewhite xl:inline text-4xl sm:text-6xl tracking-wider drop-shadow-xl my-3 font-vibes">
                   Welsen & Elene
                 </span>
               </motion.h1>
@@ -70,12 +70,11 @@ export default function Landing({ btnAction }) {
                 className="mt-5 max-w-md mx-auto b sm:flex sm:justify-center justify-center md:mt-12"
               >
                 <div
-                  className="rounded-md  flex justify-center"
+                  className="rounded-md flex justify-center px-10"
                   onClick={btnAction}
                 >
-                  <a className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-accent  backdrop-blur-md text-base font-medium rounded-md text-white  hover:bg-white hover:text-black md:py-2 md:text-lg md:px-10">
-                    <span>Open The Invitation</span>{" "}
-                    <div className="h-6 w-6" aria-hidden="true" />
+                  <a className="md:w-full lg:w-full text-center w-80 flex items-center space-x-2 justify-center px-8 py-3  border border-accent  backdrop-blur-md text-base font-medium rounded-md text-white  hover:bg-white hover:text-black md:py-2 md:text-lg md:px-10">
+                    <span>Open The Invitation</span>
                   </a>
                 </div>
               </motion.div>

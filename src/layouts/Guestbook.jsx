@@ -56,15 +56,15 @@ export default function Guestbook() {
     }
     if (!inView) {
       titleAnimation.start({
-        y: -70,
+        y: 0,
         opacity: 0,
       });
       guestbookAnimation.start({
-        x: -200,
+        x: 0,
         opacity: 0,
       });
       messageAnimation.start({
-        x: 500,
+        x: 0,
         scale: 0,
         opacity: 0,
         transition: {

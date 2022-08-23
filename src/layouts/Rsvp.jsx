@@ -53,11 +53,11 @@ function Rsvp() {
         opacity: 0,
       });
       videoAnimation.start({
-        x: -500,
+        x: 0,
         opacity: 0,
       });
       rightAnimation.start({
-        x: 500,
+        x: 0,
         opacity: 0,
       });
     }

@@ -28,13 +28,13 @@ function Livestream() {
         x: 0,
         opacity: 1,
         transition: {
-          duration: 2,
+          duration: 0.5,
         },
       });
     }
     if (!inView) {
       titleAnimation.start({
-        y: -70,
+        y: 0,
         opacity: 0,
       });
       videoAnimation.start({

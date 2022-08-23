@@ -36,7 +36,7 @@ export default function Countdown() {
         <span
           suppressHydrationWarning
           key={shortid.generate()}
-          className="flex flex-col border-2  px-3 py-3  mx-0.5 rounded bg-black bg-opacity-50 font-serif tracking-wider text-xs xxs:text-lg sm:text-xl md:text-3xl min-w-[5rem] border-none"
+          className="flex flex-col border-2  px-3 py-3  mx-0.5 rounded bg-black bg-opacity-50 font-serif tracking-wider text-xs xxs:text-base sm:text-xl md:text-2xl min-w-[5rem] border-none"
         >
           <span
             suppressHydrationWarning
@@ -46,7 +46,7 @@ export default function Countdown() {
           </span>
           <span
             suppressHydrationWarning
-            className="font-thin text-accent text-xl"
+            className="font-thin text-accent text-sm"
           >
             {interval}
           </span>
@@ -58,7 +58,7 @@ export default function Countdown() {
       <span
         suppressHydrationWarning
         key={shortid.generate()}
-        className="flex flex-col border-2  px-3 py-3  mx-0.5 rounded bg-black bg-opacity-50 font-serif tracking-wider text-xs xxs:text-lg sm:text-xl md:text-3xl xxs:min-w-[5rem] border-none"
+        className="flex flex-col border-2  px-3 py-3  mx-0.5 rounded bg-black bg-opacity-50 font-serif tracking-wider text-xs xxs:text-base  sm:text-xl md:text-2xl xxs:min-w-[4rem] border-none"
       >
         <span
           suppressHydrationWarning
@@ -68,7 +68,7 @@ export default function Countdown() {
         </span>
         <span
           suppressHydrationWarning
-          className="font-thin text-accent text-xl"
+          className="font-thin text-accent text-sm"
         >
           {interval}
         </span>

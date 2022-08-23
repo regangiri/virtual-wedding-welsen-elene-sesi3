@@ -38,7 +38,7 @@ function ThankyouSection() {
     }
     if (!inView) {
       titleAnimation.start({
-        y: -70,
+        y: 0,
         opacity: 0,
       });
       videoAnimation.start({
@@ -46,7 +46,7 @@ function ThankyouSection() {
         opacity: 0,
       });
       rightAnimation.start({
-        x: 100,
+        x: 0,
         opacity: 0,
       });
     }

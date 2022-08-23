@@ -18,6 +18,8 @@ export const ImagesStock = {
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105211/welsenElene/Welsen___Elene_CS_0522_agviyf.jpg",
   ourmoment8:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105205/welsenElene/Welsen___Elene_CS_1917_snoi0b.jpg",
+  ourmoment9:
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105263/welsenElene/Welsen___Elene_CS_1184_pvqh8e.jpg",
   ourmoment10:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661105206/welsenElene/Welsen___Elene_CS_0629_orjn8s.jpg",
   ourmoment11:
