@@ -6,6 +6,8 @@ import ModalNotif from "../components/ModalNotif";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { IoMapOutline as MapIcon } from "react-icons/io5";
+import Link from "next/link";
 
 const options = [
   { id: 1, value: "Hadir" },
@@ -25,7 +27,7 @@ function Rsvp() {
   const [totalGuest, setTotalGuest] = useState(jumlahOrang[0]);
   const [confirmation, setConfirmation] = useState(options[0]);
   const [pemberkatanRsvp, setPemberkatanRsvp] = useState("");
-  const [resepsiRsvp, setResepsiRsvp] = useState(options[0]);
+  const [resepsiRsvp, setResepsiRsvp] = useState("");
 
   const { ref, inView } = useInView();
   const titleAnimation = useAnimation();
@@ -77,7 +79,12 @@ function Rsvp() {
     );
     setName("");
     setTelephone("");
+    setTotalGuest(jumlahOrang[0]);
+    setPemberkatanRsvp("");
+    setResepsiRsvp("");
     setConfirmation(options[0]);
+    document.querySelector('input[name="pemberkatan"]:checked').checked = false;
+    document.querySelector('input[name="resepsi"]:checked').checked = false;
   };
 
   const handleSubmit = (e) => {
@@ -101,25 +108,39 @@ function Rsvp() {
       <div className="relative lg:grid lg:grid-cols-1 ">
         <motion.div
           animate={videoAnimation}
-          className="lg:col-span-12 xl:col-span-3 rounded-xl text-center py-16 bg-primary text-black"
+          className=" flex items-center justify-center flex-col rounded-xl text-center py-16 bg-primary text-black"
         >
-          <h1 className="text-3xl font-baskerville mb-8 font-semibold ">
+          <h1 className="text-3xl font-baskerville mb-8 font-bold ">
             Resepsi Pernikahan
           </h1>
-          <p>Jl. KH Wahid Hasyim No.70, RT.7/RW.5, Kb. Sirih,</p>
-          <p className="mb-[35px]">
-            {" "}
-            Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta
-            10340
-          </p>
-          <div className="relative p-auto">
-            <iframe
-              className="relative m-auto w-60 lg:w-[30rem] sm:w-[30rem] xs:w-[80px] md:w-[30rem] rounded-md shadow-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.579770032142!2d106.827017814769!3d-6.186949995520932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f42553ec284b%3A0x7bfc11195a04be29!2sMorrissey%20Hotel!5e0!3m2!1sen!2sid!4v1661177217316!5m2!1sen!2sid"
-              height="250"
-              style={{ border: 0 }}
-              loading="lazy"
-            ></iframe>
+          <p className="text-xl font-semibold">Sabtu, 24 September 2022</p>
+          <div className="flex text-xs xxs:text-sm items-center font-baskerville justify-center py-3 w-full">
+            <div className="flex px-3 flex-col items-center justify-center w-full">
+              <p className="font-bold">Tea Pai</p>
+              <p className="">14.00 - 15.00 WIB</p>
+            </div>
+            <div className="border-l-[1px] px-3 font-baskerville border-black flex items-center justify-center flex-col w-full">
+              <p className="font-bold">
+                Resepsi Pernikahan<sup>*)</sup>
+              </p>
+              <p className="">16.00 - 17.30 WIB</p>
+            </div>
+          </div>
+          <div className="address-box mx-3 flex items-center justify-center flex-col my-6">
+            <p>Jl. KH Wahid Hasyim No.70, RT.7/RW.5, Kb. Sirih,</p>
+            <p className="mb-[35px]">
+              Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta
+              10340
+            </p>
+            <Link href={`https://goo.gl/maps/MYM5sQHHyDWeBPTn9`}>
+              <a
+                target="_blank"
+                className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 max-w-sm"
+              >
+                <MapIcon className="h-6 w-6" aria-hidden="true" />{" "}
+                <span className="hover:cursor-pointer">Lihat Peta</span>
+              </a>
+            </Link>
           </div>
         </motion.div>
         <div
@@ -135,7 +156,7 @@ function Rsvp() {
             </motion.h1>
             <motion.h1
               animate={titleAnimation}
-              className="text-sm mx-auto  w-full text-center relative font-baskerville mb-8 font-semibold"
+              className="text-base mx-auto w-full text-center relative font-baskerville mb-8 font-semibold"
             >
               Mohon bantuannya untuk mengisi form dibawah ini
             </motion.h1>
@@ -148,6 +169,9 @@ function Rsvp() {
               id="formRSVP"
             >
               <div className="lg:mx-auto md:mx-auto">
+                <p className="text-lg font-baskerville font-semibold">
+                  Nama Lengkap
+                </p>
                 <label htmlFor="name" className="sr-only">
                   Full name
                 </label>
@@ -159,10 +183,12 @@ function Rsvp() {
                   name="name"
                   id="name"
                   className="block shadow-sm lg:w-96 w-full md:w-[500px] py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
-                  placeholder="Full name"
                 />
               </div>
               <div className="lg:mx-auto md:mx-auto">
+                <p className="text-lg font-baskerville font-semibold">
+                  Nomor Telepon
+                </p>
                 <label htmlFor="telephone" className="sr-only">
                   Telephone Number
                 </label>
@@ -174,19 +200,20 @@ function Rsvp() {
                   name="telephone"
                   id="telephone"
                   className="block shadow-sm lg:w-96 w-full md:w-[500px] py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
-                  placeholder="Telephone number"
                 />
               </div>
 
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
-                <p className="text-lg ">Jumlah Orang</p>
+                <p className="text-lg font-baskerville font-semibold">
+                  Jumlah Orang
+                </p>
                 <Select
                   selected={totalGuest}
                   setSelected={setTotalGuest}
                   options={jumlahOrang}
                 />
               </div>
-              <h5 className="py-0 text-xl">
+              <h5 className="py-0 text-sm sm:text-base font-baskerville">
                 Apakah anda dapat menghadiri
                 <b> Resepsi Pernikahan di Hotel Morissey?</b>
               </h5>
@@ -196,10 +223,10 @@ function Rsvp() {
                   setPemberkatanRsvp(e.target.value);
                   console.log(e.target.value);
                 }}
-                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
+                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl font-baskerville"
               >
                 <input type="radio" id="ya" name="pemberkatan" value="ya" />
-                <label htmlFor="ya" className="mx-1 mr-3">
+                <label htmlFor="ya" className="mx-1 mr-3 p-2">
                   Ya
                 </label>
 
@@ -208,12 +235,13 @@ function Rsvp() {
                   id="tidak"
                   name="pemberkatan"
                   value="tidak"
+                  required
                 />
-                <label className="mx-1" htmlFor="tidak">
+                <label className="mx-1 p-2" htmlFor="tidak">
                   Tidak
                 </label>
               </div>
-              <h5 className="py-0 text-xl">
+              <h5 className="py-0 text-sm sm:text-base font-baskerville">
                 Apakah anda dapat menghadiri
                 <b> Pemberkatan Pernikahan di Gereja?</b>
               </h5>
@@ -222,15 +250,21 @@ function Rsvp() {
                   setResepsiRsvp(e.target.value);
                   console.log(e.target.value);
                 }}
-                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl"
+                className="mx-auto lg:w-96 w-full md:w-[500px] text-xl font-baskerville"
               >
-                <input type="radio" id="ya" name="resepsi" value="ya" />
-                <label htmlFor="ya" className="mx-1 mr-3">
+                <input
+                  type="radio"
+                  id="ya"
+                  name="resepsi"
+                  value="ya"
+                  required
+                />
+                <label htmlFor="ya" className="mx-1 mr-3 p-2">
                   Ya
                 </label>
 
                 <input type="radio" id="tidak" name="resepsi" value="tidak" />
-                <label className="mx-1" htmlFor="tidak">
+                <label className="mx-1 p-2" htmlFor="tidak">
                   Tidak
                 </label>
               </div>

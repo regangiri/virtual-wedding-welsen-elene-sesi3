@@ -46,7 +46,7 @@ function HeroHome() {
         <div className="mt-5  max-w-md mx-auto sm:flex sm:justify-center justify-center md:mt-8 hover:cursor-pointer">
           <div className="rounded-md  flex justify-center">
             <Link
-              href={`https://calendar.google.com/event?action=TEMPLATE&tmeid=MnRpYzVmcTdpZmVlcmE4YWE0NWI0dGxxOWUgOHByZzZydmltcGU0Yzk0cDUxNzZxa3JsbXNAZw&tmsrc=8prg6rvimpe4c94p5176qkrlms%40group.calendar.google.com`}
+              href={`https://calendar.google.com/event?action=TEMPLATE&tmeid=MmU0YW1iYmxjYXAzOXRmbTZmdXBhY3Z1cTQgOHByZzZydmltcGU0Yzk0cDUxNzZxa3JsbXNAZw&tmsrc=8prg6rvimpe4c94p5176qkrlms%40group.calendar.google.com`}
             >
               <a
                 target="_blank"

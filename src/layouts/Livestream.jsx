@@ -72,9 +72,12 @@ function Livestream() {
           di bawah ini:
         </p>
         <Link href="https://www.youtube.com/watch?v=ENrlvremOLA">
-          <button className="border-2 my-4 px-3 py-2 rounded-xl bg-secondary text-">
+          <a
+            target="_blank"
+            className="border-2 my-4 px-3 py-2 rounded-xl bg-secondary text-"
+          >
             OPEN VIA YOUTUBE
-          </button>
+          </a>
         </Link>
       </motion.div>
     </div>

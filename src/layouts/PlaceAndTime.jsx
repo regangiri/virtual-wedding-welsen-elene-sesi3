@@ -24,9 +24,7 @@ function PlaceAndTime() {
         <p className="text-xs xxs:text-sm sm:text-base px-2">
           Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10350
         </p>
-        <Link
-          href={`https://calendar.google.com/event?action=TEMPLATE&tmeid=MnRpYzVmcTdpZmVlcmE4YWE0NWI0dGxxOWUgOHByZzZydmltcGU0Yzk0cDUxNzZxa3JsbXNAZw&tmsrc=8prg6rvimpe4c94p5176qkrlms%40group.calendar.google.com`}
-        >
+        <Link href={`https://goo.gl/maps/TtSvUxZHoekj5hGs6`}>
           <a
             target="_blank"
             className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 my-6"
