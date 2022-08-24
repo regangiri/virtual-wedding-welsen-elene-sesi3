@@ -143,7 +143,7 @@ function Rsvp() {
             </Link>
           </div>
         </motion.div>
-        <div className="nb ml-6 ">
+        <div className="nb ml-2 px-4 text-justify">
           *) Catatan: Resepsi pernikahan akan digelar di area Outdoor
         </div>
         <div

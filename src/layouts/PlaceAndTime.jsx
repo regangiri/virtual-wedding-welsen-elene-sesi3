@@ -3,19 +3,18 @@ import Accordion from "../components/Accordion";
 import groomBrideImage from "../../public/assets/images/groombridedummy.jpeg";
 import Image from "next/image";
 import { ImagesStock } from "../components/ImagesStock";
-import { Link } from "react-scroll";
+
 import { IoMapOutline as MapIcon } from "react-icons/io5";
+import Link from "next/link";
 
 function PlaceAndTime() {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
     <div className="w-full max-w-xl bg-palewhite py-8  text-md text-center">
       <h1 className="text-4xl sm:text-5xl px-3 font-baskerville py-6 text-secondary">
         Pemberkatan Pernikahan
       </h1>
 
-      <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville text-">
+      <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
         <p className="py-1 text-lg">Sabtu, 24 September 2022 | 11.00 WIB </p>
         <p className="py-2 text-lg">Gereja Santa Theresia Jakarta</p>
         <p className="text-xs xxs:text-sm sm:text-base px-2">
@@ -29,7 +28,7 @@ function PlaceAndTime() {
             target="_blank"
             className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 my-6"
           >
-            <MapIcon className="h-6 w-6" aria-hidden="true" />{" "}
+            <MapIcon className="h-6 w-6" aria-hidden="true" />
             <span className="hover:cursor-pointer">Lihat Peta</span>
           </a>
         </Link>

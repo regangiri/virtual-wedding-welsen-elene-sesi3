@@ -45,7 +45,7 @@ export const ImagesStock = {
   logoWhite:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1642525535/logo-white_wzpdft.png",
   logoPengantin:
-    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661331296/welsenElene/logo-colored_iifair.png",
+    "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661334568/welsenElene/strong_isr3a6.png",
   brideGroom:
     "https://res.cloudinary.com/karuna-wedding-org/image/upload/v1661263467/welsenElene/Welsen_Elene_CS_1608_jatak9.jpg",
 };
