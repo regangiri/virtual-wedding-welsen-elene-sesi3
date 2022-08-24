@@ -121,12 +121,12 @@ function Rsvp() {
             </div>
             <div className="border-l-[1px] px-3 font-baskerville border-black flex items-center justify-center flex-col w-full">
               <p className="font-bold">
-                Resepsi Pernikahan<sup>*)</sup>
+                Resepsi Pernikahan<sup className="text-red-700">*)</sup>
               </p>
               <p className="">16.00 - 17.30 WIB</p>
             </div>
           </div>
-          <div className="address-box mx-3 flex items-center justify-center flex-col my-6">
+          <div className="address-box mx-3 flex items-center justify-center flex-col mt-6">
             <p>Jl. KH Wahid Hasyim No.70, RT.7/RW.5, Kb. Sirih,</p>
             <p className="mb-[35px]">
               Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta
@@ -143,6 +143,9 @@ function Rsvp() {
             </Link>
           </div>
         </motion.div>
+        <div className="nb ml-6 ">
+          *) Catatan: Resepsi pernikahan akan digelar di area Outdoor
+        </div>
         <div
           ref={ref}
           className="lg:col-span-12 py-16  xl:col-span-3 xl:rounded-r-2xl xl:rounded-l-none lg:rounded-b-2xl lg:border px-auto"
