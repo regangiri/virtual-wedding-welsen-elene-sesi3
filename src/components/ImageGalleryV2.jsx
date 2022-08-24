@@ -1,16 +1,20 @@
 import React from "react";
 import { ImagesStock } from "./ImagesStock";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
-// import ReactPlayer from "react-player";
+import ModalNotif from "./ModalNotif";
+import { Modal } from "./Modal";
+import NewModal from "./NewModal";
+import Image from "next/image";
 
 export default function ImageGalleryV2() {
   const { ref, inView } = useInView();
   const titleAnimation = useAnimation();
   const videoAnimation = useAnimation();
+  const [openModal, setOpenModal] = useState(false);
+  const [indexNow, setIndexNow] = useState(0);
 
   useEffect(() => {
     if (inView) {
@@ -34,7 +38,7 @@ export default function ImageGalleryV2() {
     }
     if (!inView) {
       titleAnimation.start({
-        y: -70,
+        y: 0,
         opacity: 0,
       });
       videoAnimation.start({
@@ -45,77 +49,127 @@ export default function ImageGalleryV2() {
 
   const images = [
     {
+      id: 1,
       name: "our moments",
       src: ImagesStock.ourmoment1,
     },
     {
+      id: 2,
       name: "our moments",
       src: ImagesStock.ourmoment2,
     },
     {
+      id: 3,
       name: "our moments",
       src: ImagesStock.ourmoment3,
     },
     {
+      id: 4,
       name: "our moments",
       src: ImagesStock.ourmoment4,
     },
     {
+      id: 5,
       name: "our moments",
       src: ImagesStock.ourmoment5,
     },
     {
+      id: 6,
       name: "our moments",
       src: ImagesStock.ourmoment6,
     },
     {
+      id: 7,
       name: "our moments",
       src: ImagesStock.ourmoment7,
     },
     {
+      id: 8,
       name: "our moments",
       src: ImagesStock.ourmoment8,
     },
     {
+      id: 9,
       name: "our moments",
       src: ImagesStock.ourmoment9,
     },
     {
+      id: 10,
       name: "our moments",
       src: ImagesStock.ourmoment10,
     },
     {
+      id: 11,
       name: "our moments",
       src: ImagesStock.ourmoment11,
     },
     {
+      id: 12,
       name: "our moments",
       src: ImagesStock.ourmoment12,
     },
     {
+      id: 13,
       name: "our moments",
       src: ImagesStock.ourmoment13,
     },
     {
+      id: 14,
       name: "our moments",
       src: ImagesStock.ourmoment14,
     },
     {
+      id: 15,
       name: "our moments",
       src: ImagesStock.ourmoment15,
     },
     {
+      id: 16,
       name: "our moments",
       src: ImagesStock.ourmoment16,
     },
     {
+      id: 17,
       name: "our moments",
       src: ImagesStock.ourmoment17,
     },
   ];
 
+  const showImage = () => {
+    return (
+      <NewModal open={openModal} setOpen={setOpenModal}>
+        <div className="groom-bride-image mb-4 lg:h-96 lg:w-full h-64 max-w-lg mx-auto relative">
+          asdasd
+          <Image
+            src={images[indexNow].src}
+            alt="image"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-md"
+          />
+        </div>
+      </NewModal>
+    );
+  };
+
   return (
-    <div className="container w-full max-w-xl bg-palewhite py-12 px-2 text-md text-center ">
+    <div
+      ref={ref}
+      className="container w-full max-w-xl bg-palewhite py-12 overlflow-hidden text-md text-center "
+    >
+      <div
+        animate={videoAnimation}
+        className="flex flex-col items-center pb-12 lg:pb-0 w-full video-container mb-5"
+      >
+        <iframe
+          className="relative m-auto w-full my-10 rounded-md shadow-lg"
+          src="https://www.youtube.com/embed/CGYE08T-nVA"
+          height="300"
+          style={{ border: 0 }}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        ></iframe>
+      </div>
       <motion.h1
         animate={titleAnimation}
         className="text-5xl text-secondary drop-shadow-sm font-semibold text-center pb-8 font-vibes"
@@ -124,34 +178,36 @@ export default function ImageGalleryV2() {
       </motion.h1>
       <motion.div
         animate={videoAnimation}
-        ref={ref}
         className="images-container gap-3 columns-3"
       >
         {images.map((image, index) => {
           return (
             <img
-              key={index}
+              key={image.id}
               src={image.src}
               className="mb-3"
-              loading="eager"
+              loading="lazy"
               ismap="true"
               alt="loading"
+              onClick={() => {
+                setOpenModal(true);
+                setIndexNow(index);
+              }}
             />
           );
         })}
       </motion.div>
-      {/* <motion.div
-        animate={videoAnimation}
-        className="video-prewed flex flex-col items-center  w-full mb-5"
-      >
-        <h3 className="font-vibes text-5xl pt-24">Prewedding Video</h3>
-        <ReactPlayer
-          className="relative m-auto w-full rounded-xl"
-          url="/assets/video/videoprewed.mp4"
-          width="540px"
-          controls={true}
-        />
-      </motion.div> */}
+      <NewModal open={openModal} setOpen={setOpenModal}>
+        <div className="groom-bride-image mb-4 lg:h-96 lg:w-full h-64 max-w-lg mx-auto relative">
+          <Image
+            src={images[indexNow].src}
+            alt="image"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-md"
+          />
+        </div>
+      </NewModal>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { addRSVP } from "../helpers/supabase";
 import Select from "../components/Select";
-import Modal from "../components/Modal";
 import ModalNotif from "../components/ModalNotif";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
