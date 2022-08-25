@@ -105,7 +105,7 @@ function Rsvp() {
       </div>
       <div className="relative lg:grid lg:grid-cols-1 ">
         <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
-          <h1 className="text-xl xxs:text-3xl sm:text-5xl font-baskerville mb-10 font-bold border-b-2 border-black pb-3">
+          <h1 className="text-xl xxs:text-3xl sm:text-5xl font-baskerville mb-10 font-medium border-b-2 border-black pb-3">
             Resepsi Pernikahan
           </h1>
           <p className="text-[22px] font-semibold font-baskerville py-1">
