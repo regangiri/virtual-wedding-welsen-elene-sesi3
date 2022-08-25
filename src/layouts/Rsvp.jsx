@@ -39,7 +39,6 @@ function Rsvp() {
         opacity: 1,
         transition: {
           duration: 1,
-          delay: 1,
         },
       });
       videoAnimation.start({
@@ -105,10 +104,7 @@ function Rsvp() {
         <div className="absolute inset-y-0 left-0 bg-gray-50" />
       </div>
       <div className="relative lg:grid lg:grid-cols-1 ">
-        <motion.div
-          animate={videoAnimation}
-          className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville "
-        >
+        <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
           <h1 className="text-xl font-baskerville mb-8 font-bold border-b-2 border-black pb-3">
             Resepsi Pernikahan
           </h1>
@@ -142,31 +138,28 @@ function Rsvp() {
               </a>
             </Link>
           </div>
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           animate={videoAnimation}
           className="nb ml-2 px-4 text-left text-sm font-bold font-baskerville"
         >
           *) Catatan: Resepsi pernikahan akan digelar di area Outdoor
-        </motion.div>
-        <div
-          ref={ref}
-          className="lg:col-span-12 py-16  xl:col-span-3 xl:rounded-r-2xl xl:rounded-l-none lg:rounded-b-2xl lg:border px-auto"
-        >
+        </div>
+        <div className="lg:col-span-12 py-16  xl:col-span-3 xl:rounded-r-2xl xl:rounded-l-none lg:rounded-b-2xl lg:border px-auto">
           <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
-            <motion.h1
+            <h1
               animate={videoAnimation}
               className="text-3xl font-baskerville mb-8 font-bold  pb-3"
             >
               RSVP
-            </motion.h1>
-            <motion.h1
+            </h1>
+            <h1
               animate={videoAnimation}
               className="text-base mx-auto w-full text-left px-10 relative font-baskerville mb-8 font-semibold"
             >
               Mohon bantuannya untuk mengisi form dibawah ini
-            </motion.h1>
-            <motion.form
+            </h1>
+            <form
               animate={rightAnimation}
               onSubmit={handleSubmit}
               action="#"
@@ -283,7 +276,7 @@ function Rsvp() {
                   Submit
                 </button>
               </div>
-            </motion.form>
+            </form>
           </div>
         </div>
       </div>
