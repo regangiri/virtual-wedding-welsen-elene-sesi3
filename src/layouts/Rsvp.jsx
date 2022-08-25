@@ -105,10 +105,10 @@ function Rsvp() {
       </div>
       <div className="relative lg:grid lg:grid-cols-1 ">
         <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
-          <h1 className="text-xl xxs:text-3xl sm:text-5xl font-baskerville mb-8 font-bold border-b-2 border-black pb-3">
+          <h1 className="text-xl xxs:text-3xl sm:text-5xl font-baskerville mb-10 font-bold border-b-2 border-black pb-3">
             Resepsi Pernikahan
           </h1>
-          <p className="text-xl font-semibold font-baskerville py-1">
+          <p className="text-[22px] font-semibold font-baskerville py-1">
             Sabtu, 24 September 2022
           </p>
           <div className="flex text-xs xxs:text-sm items-center font-baskerville justify-center py-3 w-full">
@@ -117,14 +117,14 @@ function Rsvp() {
               <p className="">14.00 - 15.00 WIB</p>
             </div>
             <div className="border-l-[1px] text-sm xxs:text-[15px] xxs:px-2 font-baskerville border-black flex items-center justify-center flex-col w-full">
-              <p className="font-bold ">
+              <p className="font-bold">
                 Resepsi Pernikahan<sup>*)</sup>
               </p>
               <p className="">16.00 - 17.30 WIB</p>
             </div>
           </div>
           <div className="address-box flex flex-col items-center justify-center text-sm font-semibold font-baskerville py-3">
-            <p className="pt-2 text-xl">Hotel Morrissey </p>
+            <p className="pt-2 text-[22px] py-2">Hotel Morrissey, Lt.6</p>
             <p className="text-xs text-center sm:text-base px-2 pb-6">
               Jl. KH Wahid Hasyim No.70, Menteng, Jakarta Pusat
             </p>
@@ -212,34 +212,7 @@ function Rsvp() {
                   options={jumlahOrang}
                 />
               </div>
-              <h5 className="py-0 text-base font-baskerville">
-                Apakah anda dapat menghadiri
-                <b> Resepsi Pernikahan di Hotel Morissey?</b>
-              </h5>
 
-              <div
-                onChange={(e) => {
-                  setPemberkatanRsvp(e.target.value);
-                  console.log(e.target.value);
-                }}
-                className="mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
-              >
-                <input type="radio" id="ya" name="pemberkatan" value="ya" />
-                <label htmlFor="ya" className="mx-1 mr-3 p-2">
-                  Ya
-                </label>
-
-                <input
-                  type="radio"
-                  id="tidak"
-                  name="pemberkatan"
-                  value="tidak"
-                  required
-                />
-                <label className="mx-1 p-2" htmlFor="tidak">
-                  Tidak
-                </label>
-              </div>
               <h5 className="py-0 text-base font-medium font-baskerville">
                 Apakah anda dapat menghadiri
                 <b> Pemberkatan Pernikahan di Gereja?</b>
@@ -267,7 +240,34 @@ function Rsvp() {
                   Tidak
                 </label>
               </div>
+              <h5 className="py-0 text-base font-medium font-baskerville">
+                Apakah anda dapat menghadiri
+                <b> Resepsi Pernikahan di Hotel Morissey?</b>
+              </h5>
 
+              <div
+                onChange={(e) => {
+                  setPemberkatanRsvp(e.target.value);
+                  console.log(e.target.value);
+                }}
+                className="mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
+              >
+                <input type="radio" id="ya" name="pemberkatan" value="ya" />
+                <label htmlFor="ya" className="mx-1 mr-3 p-2">
+                  Ya
+                </label>
+
+                <input
+                  type="radio"
+                  id="tidak"
+                  name="pemberkatan"
+                  value="tidak"
+                  required
+                />
+                <label className="mx-1 p-2" htmlFor="tidak">
+                  Tidak
+                </label>
+              </div>
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <button
                   type="submit"

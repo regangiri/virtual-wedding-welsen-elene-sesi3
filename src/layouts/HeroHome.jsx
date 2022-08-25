@@ -50,7 +50,7 @@ function HeroHome() {
             >
               <a
                 target="_blank"
-                className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-md text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10"
+                className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-md text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 font-baskerville"
               >
                 <IoTimeOutline className="h-6 w-6" aria-hidden="true" />{" "}
                 <span className="hover:cursor-pointer">Remind me</span>
