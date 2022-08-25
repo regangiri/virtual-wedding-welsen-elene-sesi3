@@ -18,10 +18,7 @@ function Livestream() {
         y: 0,
         opacity: 1,
         transition: {
-          type: "spring",
-          duration: 2,
-          delay: 0.3,
-          bounce: 0.5,
+          duration: 0.2,
         },
       });
       videoAnimation.start({
@@ -46,7 +43,7 @@ function Livestream() {
     <div className="w-full max-w-xl bg-palewhite text-md text-center">
       <motion.h1
         animate={titleAnimation}
-        className="text-base font-semibold font-baskerville"
+        className="text-base font-semibold font-baskerville px-3"
       >
         Bagi undangan yang berhalangan hadir, kami mengundang anda untuk
         mengikuti acara Pemberkatan Pernikahan melalui <i>live streaming</i> di
@@ -67,16 +64,16 @@ function Livestream() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
         {/* <p>LIVE ON Saturday, September 24th, 2022 | 11.00 WIB</p> */}
-        <p className="font-semibold text-base px-6">
-          Jika <i>live stream</i> di atas bermasalah , silahkan gunakan tombol
-          di bawah ini:
+        <p className="font-semibold text-base px-6 font-baskerville">
+          Jika <i>live stream</i> di atas bermasalah, silahkan gunakan tombol di
+          bawah ini:
         </p>
         <Link href="https://www.youtube.com/watch?v=ENrlvremOLA">
           <a
             target="_blank"
-            className="border-2 my-4 px-3 py-2 rounded-xl bg-secondary text-"
+            className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 my-6"
           >
-            OPEN VIA YOUTUBE
+            Open via Youtube
           </a>
         </Link>
       </motion.div>

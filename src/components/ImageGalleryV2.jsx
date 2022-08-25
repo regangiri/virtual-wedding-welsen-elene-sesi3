@@ -157,12 +157,18 @@ export default function ImageGalleryV2() {
       ref={ref}
       className="container w-full max-w-xl bg-palewhite py-12 overlflow-hidden text-md text-center "
     >
+      <motion.h1
+        animate={titleAnimation}
+        className="text-3xl xxs:text-4xl sm:text-5xl text-secondary drop-shadow-sm font-semibold text-center py-3 font-baskerville"
+      >
+        Our Moments
+      </motion.h1>
       <div
         animate={videoAnimation}
-        className="flex flex-col items-center pb-12 lg:pb-0 w-full video-container mb-5"
+        className="flex flex-col items-center lg:pb-0 w-full video-container mb-5"
       >
         <iframe
-          className="relative m-auto w-full my-10 rounded-md shadow-lg"
+          className="relative m-auto w-full  rounded-md shadow-lg"
           src="https://www.youtube.com/embed/CGYE08T-nVA"
           height="300"
           style={{ border: 0 }}
@@ -170,12 +176,6 @@ export default function ImageGalleryV2() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
       </div>
-      <motion.h1
-        animate={titleAnimation}
-        className="text-5xl text-secondary drop-shadow-sm font-semibold text-center pb-8 font-vibes"
-      >
-        Our Moments
-      </motion.h1>
       <motion.div
         animate={videoAnimation}
         className="images-container gap-3 columns-3"
@@ -198,8 +198,8 @@ export default function ImageGalleryV2() {
         })}
       </motion.div>
       <NewModal open={openModal} setOpen={setOpenModal}>
-        <div className="groom-bride-image mb-4 lg:h-96 lg:w-full h-64 max-w-lg mx-auto relative">
-          <Image
+        <div className="groom-bride-image mb-4 w-full h-full max-w-lg mx-auto relative">
+          <img
             src={images[indexNow].src}
             alt="image"
             layout="fill"

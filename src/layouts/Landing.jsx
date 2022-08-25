@@ -32,7 +32,7 @@ export default function Landing({ btnAction }) {
                 <span className="block text-palewhite xl:inline font-baskerville tracking-wider drop-shadow-xl my-3 text-base md:text-3xl ">
                   THE WEDDING OF
                 </span>
-                <span className="block text-palewhite xl:inline text-4xl sm:text-6xl tracking-wider drop-shadow-xl my-3 font-baskerville py-6">
+                <span className="block text-palewhite xl:inline text-4xl sm:text-6xl tracking-wider drop-shadow-xl font-baskerville">
                   Welsen & Elene
                 </span>
               </motion.h1>

@@ -107,34 +107,35 @@ function Rsvp() {
       <div className="relative lg:grid lg:grid-cols-1 ">
         <motion.div
           animate={videoAnimation}
-          className=" flex items-center justify-center flex-col rounded-xl text-center py-16 bg-primary text-black"
+          className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville "
         >
-          <h1 className="text-3xl font-baskerville mb-8 font-bold ">
+          <h1 className="text-xl font-baskerville mb-8 font-bold border-b-2 border-black pb-3">
             Resepsi Pernikahan
           </h1>
-          <p className="text-xl font-semibold">Sabtu, 24 September 2022</p>
+          <p className="text-xl font-semibold font-baskerville py-1">
+            Sabtu, 24 September 2022
+          </p>
           <div className="flex text-xs xxs:text-sm items-center font-baskerville justify-center py-3 w-full">
             <div className="flex px-3 flex-col items-center justify-center w-full">
-              <p className="font-bold">Tea Pai</p>
+              <p className="font-bold sm:text-base">Tea Pai</p>
               <p className="">14.00 - 15.00 WIB</p>
             </div>
             <div className="border-l-[1px] px-3 font-baskerville border-black flex items-center justify-center flex-col w-full">
-              <p className="font-bold">
+              <p className="font-bold sm:text-base">
                 Resepsi Pernikahan<sup className="text-red-700">*)</sup>
               </p>
               <p className="">16.00 - 17.30 WIB</p>
             </div>
           </div>
-          <div className="address-box mx-3 flex items-center justify-center flex-col mt-6">
-            <p>Jl. KH Wahid Hasyim No.70, RT.7/RW.5, Kb. Sirih,</p>
-            <p className="mb-[35px]">
-              Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta
-              10340
+          <div className="address-box flex flex-col items-center justify-center text-sm font-semibold font-baskerville py-3">
+            <p className="pt-2 text-lg">Hotel Morissey </p>
+            <p className="text-xs sm:text-base px-2 pb-6">
+              Jl. KH Wahid Hasyim No.70, Menteng, Jakarta Pusat
             </p>
             <Link href={`https://goo.gl/maps/MYM5sQHHyDWeBPTn9`}>
               <a
                 target="_blank"
-                className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 max-w-sm"
+                className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 max-w-sm font-baskerville"
               >
                 <MapIcon className="h-6 w-6" aria-hidden="true" />{" "}
                 <span className="hover:cursor-pointer">Lihat Peta</span>
@@ -142,23 +143,26 @@ function Rsvp() {
             </Link>
           </div>
         </motion.div>
-        <div className="nb ml-2 px-4 text-justify">
+        <motion.div
+          animate={videoAnimation}
+          className="nb ml-2 px-4 text-left text-sm font-bold font-baskerville"
+        >
           *) Catatan: Resepsi pernikahan akan digelar di area Outdoor
-        </div>
+        </motion.div>
         <div
           ref={ref}
           className="lg:col-span-12 py-16  xl:col-span-3 xl:rounded-r-2xl xl:rounded-l-none lg:rounded-b-2xl lg:border px-auto"
         >
-          <div className="mx-auto">
+          <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
             <motion.h1
-              animate={titleAnimation}
-              className="text-xl mx-auto  w-full text-center relative font-baskerville mb-8 font-extrabold"
+              animate={videoAnimation}
+              className="text-3xl font-baskerville mb-8 font-bold  pb-3"
             >
               RSVP
             </motion.h1>
             <motion.h1
-              animate={titleAnimation}
-              className="text-base mx-auto w-full text-center relative font-baskerville mb-8 font-semibold"
+              animate={videoAnimation}
+              className="text-base mx-auto w-full text-left px-10 relative font-baskerville mb-8 font-semibold"
             >
               Mohon bantuannya untuk mengisi form dibawah ini
             </motion.h1>
@@ -215,7 +219,7 @@ function Rsvp() {
                   options={jumlahOrang}
                 />
               </div>
-              <h5 className="py-0 text-sm sm:text-base font-baskerville">
+              <h5 className="py-0 text-lg font-baskerville">
                 Apakah anda dapat menghadiri
                 <b> Resepsi Pernikahan di Hotel Morissey?</b>
               </h5>
@@ -243,7 +247,7 @@ function Rsvp() {
                   Tidak
                 </label>
               </div>
-              <h5 className="py-0 text-sm sm:text-base font-baskerville">
+              <h5 className="py-0 text-lg font-medium font-baskerville">
                 Apakah anda dapat menghadiri
                 <b> Pemberkatan Pernikahan di Gereja?</b>
               </h5>
@@ -274,7 +278,7 @@ function Rsvp() {
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <button
                   type="submit"
-                  className="inline-flex lg:w-96 w-full md:w-[500px] justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-secondary hover:bg-transparent hover:border-secondary hover:backdrop-blur-md hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+                  className="inline-flex lg:w-96 w-full md:w-[500px] justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-secondary hover:bg-transparent hover:border-secondary hover:backdrop-blur-md hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 font-baskerville focus:ring-accent"
                 >
                   Submit
                 </button>

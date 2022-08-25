@@ -34,13 +34,13 @@ function HeroHome() {
       className="w-full max-w-xl bg-palewhite py-12  text-md text-center flex items-center justify-center flex-col"
     >
       <div className="header">
-        <h3 className="font-baskerville text-xs xxs:text-lg tracking-[0.1em]">
+        <h3 className="font-baskerville text-xs xxs:text-base tracking-wide ">
           THE WEDDING OF
         </h3>
-        <h1 className="font-serif text-3xl xxs:text-4xl  font-semibold py-3 text-secondary">
+        <h1 className="font-serif text-3xl xxs:text-4xl  font-semibold py-1 text-secondary">
           Welsen & Elene
         </h1>
-        <h3 className="font-baskerville text-xs xxs:text-lg tracking-widest">
+        <h3 className="font-baskerville text-xs xxs:text-base tracking-wider">
           Sabtu, 24 September 2022
         </h3>
         <div className="mt-5  max-w-md mx-auto sm:flex sm:justify-center justify-center md:mt-8 hover:cursor-pointer">

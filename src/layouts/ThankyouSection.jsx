@@ -66,13 +66,11 @@ function ThankyouSection() {
           Merupakan sebuah kehormatan dan kebahagiaan bagi kami apabila anda
           berkenan hadir pada acara pernikahan ini
         </p>
-        <div className="thankyou-family-name xxs:text-[14px] sm:text-lg px-3 py-6 font-semibold">
+        <div className="thankyou-family-name xxs:text-[14px] sm:text-lg px-3 py-9 font-semibold">
           <p className="text-base sm:text-xl">Kami yang berbahagia:</p>
-          <p className="pt-1">
-            Keluarga Bapak Erwin Sanjaya & Ibu Florensia Farah
-          </p>
+          <p className="pt-1">Kel. Bapak Erwin Sanjaya & Ibu Florensia Farah</p>
           <p className="pb-1">
-            Keluarga Bapak Thio Tjoen Hwa & Ibu Tjung Djau Khiun
+            Kel. Bapak Thio Tjoen Hwa & Ibu Tjung Djau Khiun
           </p>
         </div>
         <motion.div

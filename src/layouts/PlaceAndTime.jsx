@@ -9,20 +9,22 @@ import Link from "next/link";
 
 function PlaceAndTime() {
   return (
-    <div className="w-full max-w-xl bg-palewhite py-8  text-md text-center">
-      <h1 className="text-4xl sm:text-5xl px-3 font-baskerville py-6 text-secondary">
+    <div className="w-full max-w-xl bg-palewhite py-8 text-md text-center flex items-center justify-center flex-col">
+      <h1 className="text-xl xxs:text-3xl sm:text-5xl mx-0 xxs:mx-12 font-baskerville py-3 text-secondary border-b-2 border-secondary mb-12">
         Pemberkatan Pernikahan
       </h1>
 
-      <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
-        <p className="py-1 text-lg">Sabtu, 24 September 2022 | 11.00 WIB </p>
-        <p className="py-2 text-lg">Gereja Santa Theresia Jakarta</p>
-        <p className="text-xs xxs:text-sm sm:text-base px-2">
-          Jl. Gereja Theresia No.2, RT.8/RW.4, Gondangdia,
+      <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
+        <p className="py-1 text-xs xxs:text-sm px-3">
+          Sabtu, 24 September 2022 | 11.00 WIB{" "}
         </p>
-        <p className="text-xs xxs:text-sm sm:text-base px-2">
+        <p className="pt-2 text-lg">Gereja St. Theresia </p>
+        <p className="py-1 text-xs xxs:text-sm px-3">
+          Jl. Gereja Theresia No.2, Menteng, Jakarta Pusat
+        </p>
+        {/* <p className="text-xs xxs:text-sm sm:text-base px-2">
           Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10350
-        </p>
+        </p> */}
         <Link href={`https://goo.gl/maps/TtSvUxZHoekj5hGs6`}>
           <a
             target="_blank"
