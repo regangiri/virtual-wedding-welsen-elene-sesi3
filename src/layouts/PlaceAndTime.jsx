@@ -15,8 +15,8 @@ function PlaceAndTime() {
       </h1>
 
       <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
-        <p className="py-1 text-xs xxs:text-sm px-3">
-          Sabtu, 24 September 2022 | 11.00 WIB{" "}
+        <p className="py-1 text-xl px-3">
+          Sabtu, 24 September 2022 <br /> 11.00 WIB{" "}
         </p>
         <p className="pt-2 text-lg">Gereja St. Theresia </p>
         <p className="py-1 text-xs xxs:text-sm px-3">

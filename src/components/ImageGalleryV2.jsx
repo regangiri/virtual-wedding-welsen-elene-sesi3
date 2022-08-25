@@ -155,11 +155,11 @@ export default function ImageGalleryV2() {
   return (
     <div
       ref={ref}
-      className="container w-full max-w-xl bg-palewhite py-12 overlflow-hidden text-md text-center "
+      className="container w-full max-w-xl bg-palewhite py-6 overlflow-hidden text-md text-center "
     >
       <motion.h1
         animate={titleAnimation}
-        className="text-3xl xxs:text-4xl sm:text-5xl text-secondary drop-shadow-sm font-semibold text-center py-3 font-baskerville"
+        className="text-3xl xxs:text-4xl sm:text-5xl text-secondary text-center py-6 font-baskerville"
       >
         Our Moments
       </motion.h1>
