@@ -161,8 +161,8 @@ function Rsvp() {
               animate={videoAnimation}
               className="text-base mx-auto w-full text-left px-10 relative font-baskerville mb-8 font-semibold"
             >
-              Please confirm your availability. We'd love to promptly receive
-              your response
+              Please confirm your availability. We&#39;d love to promptly
+              receive your response
             </h1>
             <form
               animate={rightAnimation}

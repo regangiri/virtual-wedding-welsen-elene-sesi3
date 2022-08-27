@@ -45,8 +45,8 @@ function Livestream() {
         animate={titleAnimation}
         className="text-sm font-semibold font-baskerville px-3"
       >
-        As we'd love to have your presence on our wedding daty, please join via
-        live streaming below if you are unable to attend
+        As we&#39;d love to have your presence on our wedding daty, please join
+        via live streaming below if you are unable to attend
       </motion.h1>
 
       <motion.div
