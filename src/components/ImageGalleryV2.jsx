@@ -135,23 +135,6 @@ export default function ImageGalleryV2() {
     },
   ];
 
-  const showImage = () => {
-    return (
-      <NewModal open={openModal} setOpen={setOpenModal}>
-        <div className="groom-bride-image mb-4 lg:h-96 lg:w-full h-64 max-w-lg mx-auto relative">
-          asdasd
-          <Image
-            src={images[indexNow].src}
-            alt="image"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-md"
-          />
-        </div>
-      </NewModal>
-    );
-  };
-
   return (
     <div
       ref={ref}

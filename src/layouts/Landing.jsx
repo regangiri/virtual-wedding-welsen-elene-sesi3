@@ -71,7 +71,7 @@ export default function Landing({ btnAction }) {
                 className="mt-5 max-w-md mx-auto flex-col sm:flex sm:justify-center justify-center md:mt-12"
               >
                 <div className="guest-name text-white py-6 text-base sm:text-xl">
-                  Kepada Yth. <br /> <b>{query.to}</b>
+                  Dear, <br /> <b>{query.to}</b>
                 </div>
                 <div
                   className="rounded-md flex justify-center px-4"
@@ -79,7 +79,7 @@ export default function Landing({ btnAction }) {
                 >
                   <a className="w-full text-center max-w-xs flex items-center space-x-2 justify-center border border-accent  backdrop-blur-md font-medium rounded-md text-white mx-auto hover:bg-white hover:text-black py-2 text-lg px-2">
                     <IoMailOpenOutline size="20" className="mr-2" />{" "}
-                    <span>Buka Undangan</span>
+                    <span>Open Invitation</span>
                   </a>
                 </div>
               </motion.div>

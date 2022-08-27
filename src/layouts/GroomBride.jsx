@@ -111,11 +111,12 @@ function GroomBride() {
             Welsen Lowis
           </h3>
           <h4 className="text-xs sm:text-base  font-baskerville">
-            <p className="font-bold text-xs md:text-base">Anak pertama dari:</p>{" "}
+            <p className="font-bold text-xs md:text-base">First son of:</p>{" "}
             <p className="text-xs md:text-base">
-              <br /> Bapak Erwin Sanjaya
+              <br />
+              Mr. Erwin Sanjaya
               <br /> & <br />
-              Ibu Florensia Farah
+              Mrs. Florensia Farah
             </p>
           </h4>
         </motion.div>
@@ -127,13 +128,15 @@ function GroomBride() {
             Elene Delfia
           </h3>
           <h4 className="text-xs sm:text-base font-baskerville">
-            <p className="font-bold text-xs md:text-base"> Anak kedua dari:</p>{" "}
+            <p className="font-bold text-xs md:text-base">
+              Second daughter of:
+            </p>{" "}
             <p className="text-xs md:text-base">
               {" "}
               <br />
-              Bapak Thio Tjoen Hwa <br />
+              Mr. Thio Tjoen Hwa <br />
               & <br />
-              Ibu Tjung Djau Khiun
+              Mrs. Tjung Djau Khiun
             </p>
           </h4>
         </motion.div>

@@ -46,23 +46,27 @@ export const sendMessage = async ({ name, message }) => {
 export const addRSVP = async (
   name,
   telephone,
-  total_guest,
+  matrimony_confirmation,
+  total_matrimony_guest,
   reception_confirmation,
-  matrimony_confirmation
+  total_reception_guest
 ) => {
   try {
     const addGuest = {
       name,
       telephone,
-      total_guest,
-      reception_confirmation,
       matrimony_confirmation,
+      total_matrimony_guest,
+      reception_confirmation,
+      total_reception_guest,
       created_at: new Date(),
     };
 
-    let { error } = await supabase.from("rsvp_welsenelene").insert(addGuest, {
-      returning: "minimal", // Don't return the value after inserting
-    });
+    let { error } = await supabase
+      .from("rsvp_welsenelene_sesi2")
+      .insert(addGuest, {
+        returning: "minimal", // Don't return the value after inserting
+      });
 
     if (error) {
       throw error;

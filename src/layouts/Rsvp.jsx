@@ -23,7 +23,8 @@ function Rsvp() {
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
   const [telephone, setTelephone] = useState("");
-  const [totalGuest, setTotalGuest] = useState(jumlahOrang[0]);
+  const [receptionGuest, setReceptionGuest] = useState(0);
+  const [matrimonyGuest, setMatrimonyGuest] = useState(0);
   const [confirmation, setConfirmation] = useState(options[0]);
   const [pemberkatanRsvp, setPemberkatanRsvp] = useState("");
   const [resepsiRsvp, setResepsiRsvp] = useState("");
@@ -75,14 +76,15 @@ function Rsvp() {
     Array.from(document.querySelectorAll("input")).forEach(
       (input) => (input.value = "")
     );
+    document.querySelector('input[name="pemberkatan"]:checked').checked = false;
+    document.querySelector('input[name="resepsi"]:checked').checked = false;
     setName("");
     setTelephone("");
-    setTotalGuest(jumlahOrang[0]);
+    setMatrimonyGuest(0);
+    setReceptionGuest(0);
     setPemberkatanRsvp("");
     setResepsiRsvp("");
     setConfirmation(options[0]);
-    document.querySelector('input[name="pemberkatan"]:checked').checked = false;
-    document.querySelector('input[name="resepsi"]:checked').checked = false;
   };
 
   const handleSubmit = (e) => {
@@ -90,23 +92,23 @@ function Rsvp() {
     addRSVP(
       name,
       telephone,
-
-      totalGuest.value,
       pemberkatanRsvp,
-      resepsiRsvp
+      matrimonyGuest,
+      resepsiRsvp,
+      receptionGuest
     );
     setShowModal(true);
     resetForm();
   };
   return (
-    <div className="relative flex flex-col items-center justify-center w-full max-w-xl bg-primary py-12">
+    <div className="relative flex flex-col items-center justify-center w-full max-w-xl bg-primary py-6">
       <div className="absolute inset-0">
         <div className="absolute inset-y-0 left-0 bg-gray-50" />
       </div>
       <div className="relative lg:grid lg:grid-cols-1 ">
-        <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
+        {/* <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville ">
           <h1 className="text-xl xxs:text-3xl sm:text-5xl font-baskerville mb-10 font-medium border-b-2 border-black pb-3">
-            Resepsi Pernikahan
+            Intimate Reception
           </h1>
           <p className="text-[22px] font-semibold font-baskerville py-1">
             Sabtu, 24 September 2022
@@ -118,13 +120,15 @@ function Rsvp() {
             </div>
             <div className="border-l-[1px] text-sm xxs:text-[15px] xxs:px-2 font-baskerville border-black flex items-center justify-center flex-col w-full">
               <p className="font-bold">
-                Resepsi Pernikahan<sup>*)</sup>
+                Intimate Reception<sup>*)</sup>
               </p>
               <p className="">16.00 - 17.30 WIB</p>
             </div>
           </div>
           <div className="address-box flex flex-col items-center justify-center text-sm font-semibold font-baskerville py-3">
-            <p className="pt-2 text-[22px] py-2">Hotel Morrissey, Lt.6</p>
+            <p className="pt-2 text-[22px] py-2">
+              Morrissey Hotel, 6<sup>th</sup> Floor{" "}
+            </p>
             <p className="text-xs text-center sm:text-base px-2 pb-6">
               Jl. KH Wahid Hasyim No.70, Menteng, Jakarta Pusat
             </p>
@@ -134,7 +138,7 @@ function Rsvp() {
                 className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 max-w-sm font-baskerville"
               >
                 <MapIcon className="h-6 w-6" aria-hidden="true" />{" "}
-                <span className="hover:cursor-pointer">Lihat Peta</span>
+                <span className="hover:cursor-pointer">See Location</span>
               </a>
             </Link>
           </div>
@@ -143,8 +147,8 @@ function Rsvp() {
           animate={videoAnimation}
           className="nb ml-2 px-4 text-left text-sm font-bold font-baskerville"
         >
-          *) Catatan: Resepsi pernikahan akan digelar di area Outdoor
-        </div>
+          *) Intimate reception will be held on outdoor area
+        </div> */}
         <div className="lg:col-span-12 py-16  xl:col-span-3 xl:rounded-r-2xl xl:rounded-l-none lg:rounded-b-2xl lg:border px-auto">
           <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
             <h1
@@ -157,7 +161,8 @@ function Rsvp() {
               animate={videoAnimation}
               className="text-base mx-auto w-full text-left px-10 relative font-baskerville mb-8 font-semibold"
             >
-              Mohon bantuannya untuk mengisi form dibawah ini
+              Please confirm your availability. We'd love to promptly receive
+              your response
             </h1>
             <form
               animate={rightAnimation}
@@ -169,7 +174,7 @@ function Rsvp() {
             >
               <div className="lg:mx-auto md:mx-auto">
                 <p className="text-base font-baskerville font-semibold">
-                  Nama Lengkap
+                  Full Name
                 </p>
                 <label htmlFor="name" className="sr-only">
                   Full name
@@ -186,7 +191,7 @@ function Rsvp() {
               </div>
               <div className="lg:mx-auto md:mx-auto">
                 <p className="text-base font-baskerville font-semibold">
-                  Nomor Telepon
+                  Phone Number
                 </p>
                 <label htmlFor="telephone" className="sr-only">
                   Telephone Number
@@ -202,27 +207,63 @@ function Rsvp() {
                 />
               </div>
 
+              <h5 className="py-0 text-base font-medium font-baskerville">
+                Will you attend
+                <b> Holy Matrimony (St. Theresia Church) ? </b>
+              </h5>
+              <div
+                onChange={(e) => {
+                  setPemberkatanRsvp(e.target.value);
+                  console.log(e.target.value);
+                }}
+                className="flex items-center mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
+              >
+                <input
+                  type="radio"
+                  id="ya"
+                  name="pemberkatan"
+                  value="ya"
+                  required
+                />
+                <label htmlFor="ya" className="flex items-center px-1">
+                  Yes, I will attend 😃
+                </label>
+
+                <input
+                  type="radio"
+                  id="tidak"
+                  name="pemberkatan"
+                  value="tidak"
+                />
+                <label className="flex items-center px-1" htmlFor="tidak">
+                  No, sorry ☹️
+                </label>
+              </div>
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <p className="text-base font-baskerville font-semibold">
-                  Jumlah Orang
+                  Number of Guest
                 </p>
-                <Select
-                  selected={totalGuest}
-                  setSelected={setTotalGuest}
-                  options={jumlahOrang}
+                <input
+                  autoComplete="off"
+                  required
+                  onChange={(event) => setMatrimonyGuest(event.target.value)}
+                  type="number"
+                  name="total-guest"
+                  id="total-guest"
+                  className="block shadow-sm lg:w-96 w-full md:w-[500px] py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
                 />
               </div>
-
               <h5 className="py-0 text-base font-medium font-baskerville">
-                Apakah anda dapat menghadiri
-                <b> Pemberkatan Pernikahan di Gereja?</b>
+                Will you attend
+                <b> Intimate Reception (Morrissey Hotel) ?</b>
               </h5>
+
               <div
                 onChange={(e) => {
                   setResepsiRsvp(e.target.value);
                   console.log(e.target.value);
                 }}
-                className="mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
+                className="flex items-center mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
               >
                 <input
                   type="radio"
@@ -231,42 +272,28 @@ function Rsvp() {
                   value="ya"
                   required
                 />
-                <label htmlFor="ya" className="mx-1 mr-3 p-2">
-                  Ya
+                <label htmlFor="ya" className="flex items-center px-1">
+                  Yes, I will attend 😃
                 </label>
 
                 <input type="radio" id="tidak" name="resepsi" value="tidak" />
-                <label className="mx-1 p-2" htmlFor="tidak">
-                  Tidak
+                <label className="flex items-center px-1" htmlFor="tidak">
+                  No, sorry ☹️
                 </label>
               </div>
-              <h5 className="py-0 text-base font-medium font-baskerville">
-                Apakah anda dapat menghadiri
-                <b> Resepsi Pernikahan di Hotel Morissey?</b>
-              </h5>
-
-              <div
-                onChange={(e) => {
-                  setPemberkatanRsvp(e.target.value);
-                  console.log(e.target.value);
-                }}
-                className="mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
-              >
-                <input type="radio" id="ya" name="pemberkatan" value="ya" />
-                <label htmlFor="ya" className="mx-1 mr-3 p-2">
-                  Ya
-                </label>
-
+              <div className="mx-auto lg:w-96 w-full md:w-[500px]">
+                <p className="text-base font-baskerville font-semibold">
+                  Number of Guest
+                </p>
                 <input
-                  type="radio"
-                  id="tidak"
-                  name="pemberkatan"
-                  value="tidak"
+                  autoComplete="off"
                   required
+                  onChange={(event) => setReceptionGuest(event.target.value)}
+                  type="number"
+                  name="total-guest"
+                  id="total-guest"
+                  className="block shadow-sm lg:w-96 w-full md:w-[500px] py-3 px-4 placeholder-gray-500 focus:ring-accent focus:border-accent border-gray-300 rounded-md"
                 />
-                <label className="mx-1 p-2" htmlFor="tidak">
-                  Tidak
-                </label>
               </div>
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <button

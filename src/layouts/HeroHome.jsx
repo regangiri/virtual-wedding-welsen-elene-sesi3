@@ -41,7 +41,7 @@ function HeroHome() {
           Welsen & Elene
         </h1>
         <h3 className="font-baskerville text-xs xxs:text-base tracking-wider">
-          Sabtu, 24 September 2022
+          Saturday, 24<sup>th</sup> September 2022
         </h3>
         <div className="mt-5  max-w-md mx-auto sm:flex sm:justify-center justify-center md:mt-8 hover:cursor-pointer">
           <div className="rounded-md  flex justify-center">

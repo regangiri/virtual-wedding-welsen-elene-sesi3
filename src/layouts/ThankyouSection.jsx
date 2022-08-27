@@ -58,21 +58,10 @@ function ThankyouSection() {
         animate={titleAnimation}
         className="font-baskerville text-5xl font-bold py-6"
       >
-        Terima Kasih
+        Thank You
       </motion.h1>
 
       <motion.div ref={ref} animate={rightAnimation} className="thankyou-text ">
-        <p className="xxs:text-base sm:text-lg font-semibold px-2">
-          Merupakan sebuah kehormatan dan kebahagiaan bagi kami apabila anda
-          berkenan hadir pada acara pernikahan ini
-        </p>
-        <div className="thankyou-family-name xxs:text-[14px] sm:text-lg px-3 py-9 font-semibold">
-          <p className="text-base sm:text-xl">Kami yang berbahagia:</p>
-          <p className="pt-1">Kel. Bapak Erwin Sanjaya & Ibu Florensia Farah</p>
-          <p className="pb-1">
-            Kel. Bapak Thio Tjoen Hwa & Ibu Tjung Djau Khiun
-          </p>
-        </div>
         <motion.div
           animate={videoAnimation}
           className="logo h-44 w-44 mx-auto relative"

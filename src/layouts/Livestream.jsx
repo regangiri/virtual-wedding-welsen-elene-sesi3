@@ -40,20 +40,19 @@ function Livestream() {
     }
   }, [inView]);
   return (
-    <div className="w-full max-w-xl bg-palewhite text-md text-center">
+    <div className="w-full max-w-xl bg-palewhite text-md text-center py-6">
       <motion.h1
         animate={titleAnimation}
         className="text-sm font-semibold font-baskerville px-3"
       >
-        Bagi undangan yang berhalangan hadir, kami mengundang anda untuk
-        mengikuti acara Pemberkatan Pernikahan melalui <i>live streaming</i> di
-        bawah ini
+        As we'd love to have your presence on our wedding daty, please join via
+        live streaming below if you are unable to attend
       </motion.h1>
 
       <motion.div
         animate={videoAnimation}
         ref={ref}
-        className="flex flex-col items-center pb-12 lg:pb-0 w-full video-container mb-5"
+        className="flex flex-col items-center pb-6 lg:pb-0 w-full video-container mb-5"
       >
         <iframe
           className="relative m-auto w-full my-10 rounded-md shadow-lg"
@@ -65,8 +64,8 @@ function Livestream() {
         ></iframe>
         {/* <p>LIVE ON Saturday, September 24th, 2022 | 11.00 WIB</p> */}
         <p className="font-semibold text-base px-6 font-baskerville">
-          Jika <i>live stream</i> di atas bermasalah, silahkan gunakan tombol di
-          bawah ini:
+          Should there be any problem with live stream above, please click the
+          button below
         </p>
         <Link href="https://www.youtube.com/watch?v=ENrlvremOLA">
           <a

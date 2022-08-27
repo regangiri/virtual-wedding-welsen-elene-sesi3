@@ -40,9 +40,7 @@ export default function Guestbook() {
         x: 0,
         opacity: 1,
         transition: {
-          type: "spring",
-          duration: 2,
-          bounce: 0.3,
+          duration: 1,
         },
       });
       messageAnimation.start({
@@ -99,7 +97,10 @@ export default function Guestbook() {
   }, [onSubmitStatus]);
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full max-w-xl bg-primary py-12  ">
+    <div
+      ref={ref}
+      className="relative flex flex-col items-center justify-center w-full max-w-xl bg-palewhite py-6  font-baskerville"
+    >
       <div className="absolute inset-0">
         {/* <div className="absolute inset-y-0 left-0 w-full bg-gray-50" /> */}
       </div>
@@ -108,7 +109,7 @@ export default function Guestbook() {
           <div className="max-w-lg mx-auto lg:max-w-none">
             <motion.h1
               animate={titleAnimation}
-              className="text-4xl font-typography font-semibold text-secondary pb-10"
+              className="text-4xl font-baskerville text-secondary pb-10"
             >
               Prayer and Wishes
             </motion.h1>
@@ -153,18 +154,18 @@ export default function Guestbook() {
                 />
               </motion.div>
 
-              <motion.div ref={ref} animate={guestbookAnimation}>
+              <motion.div animate={guestbookAnimation}>
                 <button
                   type="submit"
                   className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-palewhite bg-secondary hover:bg-transparent hover:border-secondary hover:backdrop-blur-md hover:text-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
                 >
-                  Send Pray & Wish
+                  Send
                 </button>
               </motion.div>
             </form>
           </div>
         </div>
-        <div className="wishes-box py-10 lg:col-span-7 lg:py-3 px-3 xl:px-6">
+        <div className="wishes-box bg-primary py-10 lg:col-span-7 lg:py-3 px-3 xl:px-6">
           <div className="overflow-y-scroll scrollbar-hide h-96   ">
             {guestData &&
               guestData.map((guest, index) => {
@@ -181,7 +182,7 @@ export default function Guestbook() {
                         alt=""
                       />
                     </div>
-                    <div className="ml-4 w-full">
+                    <div className="ml-4 w-full overflow-hidden">
                       <div className="text-sm leading-5 font-medium text-accent break-words ">
                         {guest.name}
                       </div>

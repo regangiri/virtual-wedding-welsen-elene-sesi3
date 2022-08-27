@@ -42,12 +42,12 @@ export default function Home() {
       <HeroHome />
       <GroomBride />
       <PlaceAndTime />
-      <Livestream />
       <Rsvp />
+      <Guestbook />
+      <Livestream />
       <ImageGalleryV2 />
       <ThankyouSection />
       {/* <Gift /> */}
-      {/* <Guestbook /> */}
       {/* <Footer /> */}
       <MusicPlayer />
     </Layout>
