@@ -136,7 +136,7 @@ function GroomBride() {
               <br />
               Mr. Thio Tjoen Hwa <br />
               & <br />
-              Mrs. Tjung Djau Khiun
+              Mrs. Phang Djau Khiun
             </p>
           </h4>
         </motion.div>
