@@ -138,7 +138,7 @@ export default function ImageGalleryV2() {
   return (
     <div
       ref={ref}
-      className="container w-full max-w-xl bg-palewhite py-6 overlflow-hidden text-md text-center "
+      className="container w-full max-w-xl bg-palewhite pb-6 overlflow-hidden text-md text-center "
     >
       <motion.h1
         animate={titleAnimation}

@@ -43,11 +43,17 @@ function Livestream() {
     <div className="w-full max-w-xl bg-palewhite text-md text-center py-6">
       <motion.h1
         animate={titleAnimation}
+        className="groom-bride-title text-4xl sm:text-5xl px-3 font-baskerville py-6 text-secondary"
+      >
+        Livestream
+      </motion.h1>
+      <motion.h2
+        animate={titleAnimation}
         className="text-sm font-semibold font-baskerville px-3"
       >
-        As we&#39;d love to have your presence on our wedding daty, please join
+        As we&#39;d love to have your presence on our wedding day, please join
         via live streaming below if you are unable to attend
-      </motion.h1>
+      </motion.h2>
 
       <motion.div
         animate={videoAnimation}
@@ -63,14 +69,14 @@ function Livestream() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         ></iframe>
         {/* <p>LIVE ON Saturday, September 24th, 2022 | 11.00 WIB</p> */}
-        <p className="font-semibold text-base px-6 font-baskerville">
+        <p className="font-semibold text-sm px-6 font-baskerville">
           Should there be any problem with live stream above, please click the
           button below
         </p>
         <Link href="https://www.youtube.com/watch?v=ENrlvremOLA">
           <a
             target="_blank"
-            className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3  border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 my-6 max-w-sm font-baskerville"
+            className="md:w-full lg:w-full text-center w-64 flex items-center space-x-2 justify-center px-8 py-3 border border-secondary bg-secondary text-white text-base font-medium rounded-3xl text-button  hover:backdrop-blur-xl hover:bg-transparent hover:text-secondary md:py-2 md:text-lg md:px-10 my-6 max-w-sm font-baskerville"
           >
             Open via Youtube
           </a>

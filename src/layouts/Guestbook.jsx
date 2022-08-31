@@ -99,19 +99,19 @@ export default function Guestbook() {
   return (
     <div
       ref={ref}
-      className="relative flex flex-col items-center justify-center w-full max-w-xl bg-palewhite py-6  font-baskerville"
+      className="relative flex flex-col items-center justify-center w-full max-w-xl bg-primary py-6  font-baskerville"
     >
       <div className="absolute inset-0">
-        {/* <div className="absolute inset-y-0 left-0 w-full bg-gray-50" /> */}
+        <div className="absolute inset-y-0 left-0 w-full bg-primary" />
       </div>
       <div className="relative w-full">
         <div className="bg-primary py-10 px-6 sm:px-6 lg:col-span-5 lg:px-14 lg:py-16 xl:pr-12 w-full">
           <div className="max-w-lg mx-auto lg:max-w-none">
             <motion.h1
               animate={titleAnimation}
-              className="text-4xl font-baskerville text-secondary pb-10"
+              className="text-4xl font-baskerville text-center text-black pb-10"
             >
-              Prayer and Wishes
+              Wishes and Prayer
             </motion.h1>
             <form
               onSubmit={handleSubmit}

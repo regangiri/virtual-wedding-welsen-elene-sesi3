@@ -14,6 +14,7 @@ import Livestream from "../layouts/Livestream";
 import PlaceAndTime from "../layouts/PlaceAndTime";
 import Rsvp from "../layouts/Rsvp";
 import ThankyouSection from "../layouts/ThankyouSection";
+import GroomBrideStory from "../layouts/GroomBrideStory";
 
 export default function Home() {
   const [isLanding, setIsLanding] = useState(true);
@@ -41,6 +42,7 @@ export default function Home() {
     <Layout>
       <HeroHome />
       <GroomBride />
+      <GroomBrideStory />
       <PlaceAndTime />
       <Rsvp />
       <Guestbook />
