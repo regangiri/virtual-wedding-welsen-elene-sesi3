@@ -216,28 +216,31 @@ function Rsvp() {
                   setPemberkatanRsvp(e.target.value);
                   console.log(e.target.value);
                 }}
-                className="flex items-center mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
+                className="flex flex-col items-start mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
               >
-                <input
-                  type="radio"
-                  id="ya"
-                  name="pemberkatan"
-                  value="ya"
-                  required
-                />
-                <label htmlFor="ya" className="flex items-center px-1">
-                  Yes, I will attend 😃
-                </label>
-
-                <input
-                  type="radio"
-                  id="tidak"
-                  name="pemberkatan"
-                  value="tidak"
-                />
-                <label className="flex items-center px-1" htmlFor="tidak">
-                  No, sorry ☹️
-                </label>
+                <div className="flex">
+                  <input
+                    type="radio"
+                    id="ya"
+                    name="pemberkatan"
+                    value="ya"
+                    required
+                  />
+                  <label htmlFor="ya" className="flex items-center px-1">
+                    Yes, I will attend 😃
+                  </label>
+                </div>
+                <div className="flex">
+                  <input
+                    type="radio"
+                    id="tidak"
+                    name="pemberkatan"
+                    value="tidak"
+                  />
+                  <label className="flex items-center px-1" htmlFor="tidak">
+                    No, sorry ☹️
+                  </label>
+                </div>
               </div>
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <p className="text-base font-baskerville font-semibold">
@@ -263,23 +266,26 @@ function Rsvp() {
                   setResepsiRsvp(e.target.value);
                   console.log(e.target.value);
                 }}
-                className="flex items-center mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
+                className="flex flex-col items-start mx-auto lg:w-96 w-full md:w-[500px] text-base font-baskerville"
               >
-                <input
-                  type="radio"
-                  id="ya"
-                  name="resepsi"
-                  value="ya"
-                  required
-                />
-                <label htmlFor="ya" className="flex items-center px-1">
-                  Yes, I will attend 😃
-                </label>
-
-                <input type="radio" id="tidak" name="resepsi" value="tidak" />
-                <label className="flex items-center px-1" htmlFor="tidak">
-                  No, sorry ☹️
-                </label>
+                <div className="flex">
+                  <input
+                    type="radio"
+                    id="ya"
+                    name="resepsi"
+                    value="ya"
+                    required
+                  />
+                  <label htmlFor="ya" className="flex items-center px-1">
+                    Yes, I will attend 😃
+                  </label>
+                </div>
+                <div className="flex">
+                  <input type="radio" id="tidak" name="resepsi" value="tidak" />
+                  <label className="flex items-center px-1" htmlFor="tidak">
+                    No, sorry ☹️
+                  </label>
+                </div>
               </div>
               <div className="mx-auto lg:w-96 w-full md:w-[500px]">
                 <p className="text-base font-baskerville font-semibold">

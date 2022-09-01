@@ -145,7 +145,7 @@ export default function ImageGalleryV2() {
       >
         Wedding Gallery
       </motion.h1>
-      <div className="groom-bride-story-image w-[15rem] h-[20rem] xxs:w-[22rem] xxs:h-[28rem] sm:w-[23rem] sm:h-[30rem]  xl:w-[28rem] xl:h-[35rem] mb-4   max-w-lg px-6 mx-auto relative my-6">
+      <div className="groom-bride-story-image w-[15rem] h-[20rem] xxs:w-[18rem] xxs:h-[28rem] sm:w-[23rem] sm:h-[30rem]  xl:w-[28rem] xl:h-[35rem] mb-4   max-w-lg px-6 mx-auto relative my-6">
         <Image
           src={storyImg}
           alt="Bride"
