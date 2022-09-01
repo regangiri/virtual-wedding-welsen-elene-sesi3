@@ -20,7 +20,7 @@ function PlaceAndTime() {
           held on:
         </h3>
         <h3 className="px-3 text-xl ">Holy Matrimony</h3>
-        <p className="py-1 text-base px-3">
+        <p className="py-1 text-xs xxs:text-sm px-3">
           Saturday, 24<sup>th</sup> September 2022 | 11.00 WIB{" "}
         </p>
         <p className="pt-2 text-xl">St. Theresia Church </p>
@@ -45,7 +45,7 @@ function PlaceAndTime() {
           Intimate Reception
         </h1> */}
         <h3 className="px-3 text-xl pt-6">Intimate Reception</h3>
-        <p className="py-1 text-base px-3">
+        <p className="py-1 text-xs xxs:text-sm px-3">
           Saturday, 24<sup>th</sup> September 2022 | 18.30 WIB{" "}
         </p>
 

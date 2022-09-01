@@ -150,7 +150,7 @@ export default function ImageGalleryV2() {
           src={storyImg}
           alt="Bride"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           className="rounded-md "
         />
       </div>
