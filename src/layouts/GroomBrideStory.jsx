@@ -1,14 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import timelineDummy from "../../public/assets/images/timeline.png";
+import timelineDummy from "../../public/assets/images/story.png";
 
 function GroomBrideStory() {
   return (
-    <div className="groom-bride-section w-full max-w-xl bg-primary py-12 text-md text-center">
-      <h1 className="groom-bride-story-title text-4xl sm:text-5xl px-3 font-baskerville py-6">
-        Our Story
-      </h1>
-      <div className="groom-bride-story-image mb-4 lg:h-96 lg:w-full h-64 max-w-lg px-6 mx-auto relative">
+    <div className="groom-bride-section w-full max-w-xl bg-primary pb-6 text-md text-center">
+      <div className="groom-bride-story-image w-[15rem] h-[20rem] xxs:w-[20rem] xxs:h-[28rem] sm:w-[23rem] sm:h-[30rem]  xl:w-[28rem] xl:h-[35rem] mb-4   max-w-lg px-6 mx-auto relative">
         <Image
           src={timelineDummy}
           alt="Bride"
