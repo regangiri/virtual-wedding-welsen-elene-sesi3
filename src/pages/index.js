@@ -42,7 +42,7 @@ export default function Home() {
     <Layout>
       <HeroHome />
       <GroomBride />
-      <GroomBrideStory />
+      {/* <GroomBrideStory /> */}
       <PlaceAndTime />
       <Rsvp />
       <Guestbook />

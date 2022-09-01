@@ -153,7 +153,7 @@ function Rsvp() {
           <div className="flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
             <h1
               animate={videoAnimation}
-              className="text-3xl font-baskerville mb-8 font-bold  pb-3"
+              className="text-4xl sm:text-5xl font-baskerville mb-8 font-bold  pb-3"
             >
               RSVP
             </h1>

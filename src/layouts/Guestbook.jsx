@@ -109,9 +109,9 @@ export default function Guestbook() {
           <div className="max-w-lg mx-auto lg:max-w-none">
             <motion.h1
               animate={titleAnimation}
-              className="text-4xl font-baskerville text-center text-black pb-10"
+              className="text-4xl sm:text-5xl font-baskerville text-center text-black pb-10"
             >
-              Wishes and Prayer
+              Wishes &#38; Prayers
             </motion.h1>
             <form
               onSubmit={handleSubmit}

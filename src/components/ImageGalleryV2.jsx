@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
-import ModalNotif from "./ModalNotif";
-import { Modal } from "./Modal";
+import storyImg from "../../public/assets/images/story.png";
 import NewModal from "./NewModal";
 import Image from "next/image";
 
@@ -144,8 +143,17 @@ export default function ImageGalleryV2() {
         animate={titleAnimation}
         className="text-3xl xxs:text-4xl sm:text-5xl text-secondary text-center py-6 font-baskerville"
       >
-        Our Moments
+        Wedding Gallery
       </motion.h1>
+      <div className="groom-bride-story-image w-[15rem] h-[20rem] xxs:w-[22rem] xxs:h-[28rem] sm:w-[23rem] sm:h-[30rem]  xl:w-[28rem] xl:h-[35rem] mb-4   max-w-lg px-6 mx-auto relative my-6">
+        <Image
+          src={storyImg}
+          alt="Bride"
+          layout="fill"
+          objectFit="cover"
+          className="rounded-md "
+        />
+      </div>
       <div
         animate={videoAnimation}
         className="flex flex-col items-center lg:pb-0 w-full video-container mb-5"
