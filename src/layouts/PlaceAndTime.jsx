@@ -16,11 +16,15 @@ function PlaceAndTime() {
 
       <div className="time-and-date-description flex flex-col items-center justify-center text-sm font-semibold font-baskerville">
         <h3 className="px-3 text-lg py-6">Our wedding will be held on:</h3>
-        <h3 className="px-3 text-xl ">Holy Matrimony</h3>
+
+        <p className="pt-2 text-xl">St. Theresia Church, Jakarta</p>
         <p className="py-1 text-xs xxs:text-sm px-3">
-          Saturday, 24<sup>th</sup> September 2022 | 11.00 WIB{" "}
+          Saturday, 24<sup>th</sup> September 2022 | 11.00 WIB
         </p>
-        <p className="pt-2 text-xl">St. Theresia Church </p>
+        <p className="pt-3 text-xs xxs:text-sm px-3">
+          As we&apos;d love to have your presence on our wedding day, please
+          join our Holy Matrimony via live streaming below.
+        </p>
         <div className="flex flex-col items-center pb-6 lg:pb-0 w-full video-container mb-5">
           <iframe
             className="relative m-auto w-full my-10 rounded-md shadow-lg"

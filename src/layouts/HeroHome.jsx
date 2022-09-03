@@ -58,15 +58,19 @@ function HeroHome() {
             </Link>
           </div>
         </div>
-        <div className="hero-text font-baskerville text-base text-left">
+        <div className="hero-text font-baskerville text-base text-left pt-16">
           <p className="my-4 px-6">Dear {query.to},</p>
           <p className="my-4 px-6">
             We made the difficult decision to keep our wedding intimate, and
             unfortunately that means there are a lot of friends and family who
-            won&apos;t be there on our wedding day. <br /> We hope you can
-            understand that it&apos;s nothing personal. Please accept our
-            sincerest apologies for not being able to invite you to our wedding
-            day.
+            won&apos;t be there on our wedding day.
+            <p className="my-4 ">
+              We hope you can understand that it&apos;s nothing personal.
+            </p>
+            <p className="my-4">
+              Please accept our sincerest apologies for not being able to invite
+              you to our wedding day.
+            </p>
           </p>
           <p className="my-4 px-6">
             Regards, <br /> Welsen &#38; Elene
