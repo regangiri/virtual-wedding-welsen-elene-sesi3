@@ -63,9 +63,10 @@ function HeroHome() {
           <p className="my-4 px-6">
             We made the difficult decision to keep our wedding intimate, and
             unfortunately that means there are a lot of friends and family who
-            won't be there on our wedding day. <br /> We hope you can understand
-            that it's nothing personal. Please accept our sincerest apologies
-            for not being able to invite you to our wedding day.
+            won&apos;t be there on our wedding day. <br /> We hope you can
+            understand that it&apos;s nothing personal. Please accept our
+            sincerest apologies for not being able to invite you to our wedding
+            day.
           </p>
           <p className="my-4 px-6">
             Regards, <br /> Welsen &#38; Elene
