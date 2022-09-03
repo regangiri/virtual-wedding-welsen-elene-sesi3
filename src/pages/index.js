@@ -44,9 +44,9 @@ export default function Home() {
       <GroomBride />
       {/* <GroomBrideStory /> */}
       <PlaceAndTime />
-      <Rsvp />
+      {/* <Rsvp /> */}
       <Guestbook />
-      <Livestream />
+      {/* <Livestream /> */}
       <ImageGalleryV2 />
       <ThankyouSection />
       {/* <Gift /> */}

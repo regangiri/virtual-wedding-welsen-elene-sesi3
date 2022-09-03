@@ -38,7 +38,7 @@ function HeroHome() {
           THE WEDDING OF
         </h3>
         <h1 className="font-serif text-3xl xxs:text-4xl  font-semibold py-1 text-secondary">
-          Welsen & Elene
+          Welsen &#38; Elene
         </h1>
         <h3 className="font-baskerville text-xs xxs:text-base tracking-wider">
           Saturday, 24<sup>th</sup> September 2022
@@ -58,19 +58,19 @@ function HeroHome() {
             </Link>
           </div>
         </div>
-        {/* <p
-          ref={ref}
-          className="my-4 px-6 text-sm xxs:text-lg sm:text-xl font-baskerville font-medium"
-        >
-          Due to the pandemic, we have made the difficult decision to scale down
-          our guest list. Please accept our deepest apologies for not being able
-          to host you on our special day. We will miss your presence and thank
-          you for your love and understanding.
-        </p>
-        <p className="my-4 px-6 text-sm xxs:text-lg sm:text-xl font-baskerville font-medium">
-          Join us virtually as we exchange our vows through Youtube live
-          streaming.
-        </p> */}
+        <div className="hero-text font-baskerville text-base text-left">
+          <p className="my-4 px-6">Dear {query.to},</p>
+          <p className="my-4 px-6">
+            We made the difficult decision to keep our wedding intimate, and
+            unfortunately that means there are a lot of friends and family who
+            won't be there on our wedding day. <br /> We hope you can understand
+            that it's nothing personal. Please accept our sincerest apologies
+            for not being able to invite you to our wedding day.
+          </p>
+          <p className="my-4 px-6">
+            Regards, <br /> Welsen &#38; Elene
+          </p>
+        </div>
       </div>
     </motion.div>
   );

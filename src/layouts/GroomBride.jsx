@@ -87,7 +87,7 @@ function GroomBride() {
         animate={titleAnimation}
         className="groom-bride-title text-4xl sm:text-5xl px-3 font-baskerville py-6"
       >
-        Groom & Bride
+        Groom &#38; Bride
       </motion.h2>
 
       <motion.div

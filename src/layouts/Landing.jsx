@@ -70,16 +70,16 @@ export default function Landing({ btnAction }) {
                 }}
                 className="mt-5 max-w-md mx-auto flex-col sm:flex sm:justify-center justify-center md:mt-12"
               >
-                <div className="guest-name text-white py-6 text-base sm:text-xl">
+                {/* <div className="guest-name text-white py-6 text-base sm:text-xl">
                   Dear, <br /> <b>{query.to}</b>
-                </div>
+                </div> */}
                 <div
                   className="rounded-md flex justify-center px-4"
                   onClick={btnAction}
                 >
                   <a className="w-full text-center max-w-xs flex items-center space-x-2 justify-center border border-accent  backdrop-blur-md font-medium rounded-md text-white mx-auto hover:bg-white hover:text-black py-2 text-lg px-2">
                     <IoMailOpenOutline size="20" className="mr-2" />{" "}
-                    <span>Open Invitation</span>
+                    <span>Open Announcement</span>
                   </a>
                 </div>
               </motion.div>
